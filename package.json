@@ -1,6 +1,6 @@
 {
   "name": "best-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "best-ui",
     "vue",
@@ -8,6 +8,7 @@
   ],
   "license": "MIT",
   "author": "vist",
+  "main": "src/index.js",
   "homepage": "https://bestvist.github.io/best-ui/",
   "bugs": {
     "url": "https://github.com/bestvist/best-ui/issues"
