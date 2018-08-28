@@ -1,7 +1,22 @@
-import BvLayout from './index.vue';
+import Layout from './index.vue';
+import Header from '../header';
+import Content from '../content';
+import Slider from '../slider';
+import Footer from '../footer';
 
-BvLayout.install = function (Vue) {
-    Vue.component(BvLayout.name, BvLayout);
+const components = [
+    Layout,
+    Header,
+    Content,
+    Slider,
+    Footer
+]
+
+Layout.install = function (Vue) {
+    components.forEach(c => {
+        Vue.component(c.name, Layout);
+    })
 }
 
-export default BvLayout;
+
+export default Layout;

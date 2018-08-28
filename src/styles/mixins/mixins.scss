@@ -1,0 +1,29 @@
+/*
+ * mixins style
+ */
+
+/* BEM 
+ * b: block
+ * e: element
+ * m: modifier
+ */
+
+ @mixin b($block) {
+    $B: $namespace+'-'+$block !global;
+    .#{$B} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: "";
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector + & + "--" + $unit + ","};
+    }
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}

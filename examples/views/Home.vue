@@ -1,8 +1,16 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <be-layout>
+      <be-header>header</be-header>
+      <be-content>
 
-    <bv-layout></bv-layout>
+      </be-content>
+      <be-slider>
+
+      </be-slider>
+      <be-footer>footer</be-footer>
+    </be-layout>
+
   </div>
 </template>
 

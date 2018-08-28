@@ -10,9 +10,11 @@ npm install best-ui --save
 
 # Quick Start
 ```
-import Vue from 'vue'
-import BestUI from 'best-ui'
-Vue.use(BestUI)
+import Vue from 'vue';
+import BestUI from 'best-ui';
+import 'best-ui/dist/bestui.css';
+
+Vue.use(BestUI);
 ```
 
 # TODO
