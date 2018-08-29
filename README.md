@@ -20,8 +20,8 @@ Vue.use(BestUI);
 # TODO
 要做的事：
 ## 基础
-- Layout 布局
-- Color 色彩
+- [x] Layout 布局
+- [x] Color 色彩
 - Icon 图标
 - Input 输入框
 - Button 按钮
