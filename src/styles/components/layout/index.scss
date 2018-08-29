@@ -1,25 +1,40 @@
-// @include b(layout) {
-//     display: flex;
-//     flex: 1;
-//     flex-basis: auto;
-//     flex-direction: column;
-//     box-sizing: border-box;
-// }
+@include b(layout) {
+    display: flex;
+    flex: 1;
+    flex-basis: auto;
+    flex-direction: column;
 
-// @include b(header) {
-//     padding: $padding;
-//     background: $bg;
-// }
+    &.is-horizontal {
+        flex-direction: row;
+    }
+}
 
-// @include b(footer) {
-//     padding: $padding;
-//     background: $bg;
-// }
+@include b($layout-list) {
+    padding: $padding;
+    line-height: $header-footer-line-height;
+    background: $white;
+    box-shadow: $shadow-y;
+}
 
-// @include b(container) {
-//     padding: $padding;
-// }
+@include b(content) {
+    flex: 1;
+    padding: $padding;
+}
 
-// @include b(slider) {
-//     padding: $padding;
-// }
+@include b(slider) {
+    padding: $padding;
+}
+
+@include b(row) {
+    position: relative;
+    @include clearfix;
+}
+
+@include b(col) {
+    @include col-prop;
+}
+
+[class*=#{$prefix+'-col-'}] {
+    float: left;
+    position: relative;
+}

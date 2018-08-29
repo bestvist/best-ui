@@ -1,17 +1,11 @@
 <template>
-    <main class="be-content">
+    <main class="b-content">
         <slot></slot>
     </main>
 </template>
 
 <script>
 export default {
-    name: "BeContent"
+    name: "BContent"
 };
 </script>
-
-<style lang="scss">
-@include b(content) {
-    padding: $padding;
-}
-</style>

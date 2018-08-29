@@ -1,11 +1,25 @@
 /*
  * common style
  */
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
+    color: $color-text-primary;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
 }

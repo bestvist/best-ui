@@ -1,29 +1,100 @@
 /*
  * mixins style
  */
-
 /* BEM 
  * b: block
  * e: element
  * m: modifier
  */
+@mixin b($block) {
+    // $B: $prefix+'-'+$block !global;
+    // .#{$B} {
+    //     @content;
+    // }
+    $currentSelector: '';
 
- @mixin b($block) {
-    $B: $namespace+'-'+$block !global;
-    .#{$B} {
+    @each $unit in $block {
+        $B: $prefix+'-'+$unit !global;
+        $currentSelector: #{$currentSelector + '.' + $B + ','};
+    }
+
+    #{$currentSelector} {
         @content;
     }
 }
 
-@mixin m($modifier) {
+@mixin e($element) {
+    $E: $element !global;
     $selector: &;
-    $currentSelector: "";
-    @each $unit in $modifier {
-        $currentSelector: #{$currentSelector + & + "--" + $unit + ","};
+    $currentSelector: '';
+
+    @each $unit in $element {
+        $currentSelector: #{$currentSelector + '.' + $B + '-' + $unit + ','};
     }
+
     @at-root {
         #{$currentSelector} {
             @content;
         }
     }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: '';
+
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector + & + '--' + $unit + ','};
+    }
+
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}
+
+@mixin col-prop {
+    @for $i from 1 through 24 {
+        $percent: 100% * $i / 24;
+
+        @at-root {
+            #{'.' + $B + '-' + $i} {
+                width: 100% * $i / 24;
+            }
+
+            #{'.' + $B +'-offset-' + $i} {
+                margin-left: $percent;
+            }
+
+            #{'.' + $B +'-push-' + $i} {
+                left: $percent;
+            }
+
+            #{'.' + $B +'-pull-' + $i} {
+                right: $percent;
+            }
+        }
+    }
+}
+
+@mixin clearfix {
+    @at-root {
+
+        &::before,
+        &::after {
+            display: table;
+            content: "";
+        }
+
+        &::after {
+            clear: both
+        }
+    }
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

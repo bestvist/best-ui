@@ -1,3 +1,25 @@
-$namespace: 'be';
+$prefix: 'b';
+$white: #fff !default;
+$dark: #000 !default;
+/* 
+ * color
+*/
+$color-primary: #ff9800 !default;
+$color-light-primary: #ffe0b2 !default;
+$color-dark-primary: #e65100 !default;
+$color-text-primary: #5f5f5f;
 $padding: 10px;
+$font-size: 14px;
 $bg: #f5f5f5;
+/* 
+* shadow
+*/
+$shadow: 0 0 10px rgba(0, 0, 0, .1);
+$shadow-x: 3px 0 10px rgba(0, 0, 0, .1);
+$shadow-y: 0 3px 10px rgba(0, 0, 0, .1);
+$shadow-xy: 3px 3px 10px rgba(0, 0, 0, .1);
+/* 
+* header-footer 
+*/
+$layout-list: header footer;
+$header-footer-line-height: 40px;

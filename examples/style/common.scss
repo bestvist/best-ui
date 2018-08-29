@@ -1,0 +1,22 @@
+html,
+body {
+    height: 100%;
+}
+
+.bg {
+    &-primary {
+        background: #ff9800;
+    }
+
+    &-light-primary {
+        background: #ffe0b2;
+    }
+
+    &-dark-primary {
+        background: #e65100;
+    }
+}
+
+.panel {
+    margin-bottom: 20px;
+}

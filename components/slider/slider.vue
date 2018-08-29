@@ -1,17 +1,14 @@
 <template>
-    <aside class="be-slider">
+    <aside class="b-slider" :style="{width:width}">
         <slot></slot>
     </aside>
 </template>
 
 <script>
 export default {
-    name: "BeSlider"
+    name: "BSlider",
+    props: {
+        width: String
+    }
 };
 </script>
-
-<style lang="scss">
-@include b(slider) {
-    padding: $padding;
-}
-</style>

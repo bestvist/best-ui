@@ -9,14 +9,5 @@ module.exports = {
         }
     },
     css: {
-        modules: true,
-        loaderOptions: {
-            css: {
-                localIdentName: 'style/[name]'
-            },
-            sass: {
-                data: `@import "@/styles/index.scss";`
-            }
-        }
     }
 }

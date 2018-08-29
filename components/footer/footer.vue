@@ -1,23 +1,14 @@
 <template>
-    <footer class="be-footer" :style="{height:height}">
+    <footer class="b-footer" :style="{height:height}">
         <slot></slot>
     </footer>
 </template>
 
 <script>
 export default {
-    name: "BeFooter",
+    name: "BFooter",
     props: {
-        height: {
-            type: String
-        }
+        height: String
     }
 };
 </script>
-
-<style lang="scss">
-@include b(footer) {
-    padding: $padding;
-    background: $bg;
-}
-</style>

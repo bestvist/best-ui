@@ -1,24 +1,15 @@
 <template>
-    <header class="be-header" :style="{height:height}">
+    <header class="b-header" :style="{height:height}">
         <slot></slot>
     </header>
 </template>
 
 <script>
 export default {
-    name: "BeHeader",
+    name: "BHeader",
     props: {
-        height: {
-            type: String
-        }
+        height: String
     }
 };
 </script>
-
-<style lang="scss">
-@include b(header) {
-    padding: $padding;
-    background: $bg;
-}
-</style>
 
