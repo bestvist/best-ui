@@ -6,23 +6,44 @@ Vue.use(Router)
 
 const routes = [{
     path: '/',
+    meta: {
+      title: 'Home 主页'
+    },
     component: Home
   },
   {
     path: '/layout',
+    meta: {
+      title: 'Layout 布局'
+    },
     component: () =>
-      import ('../views/Layout.vue')
+      import ('../views/Layout.vue'),
   },
   {
     path: '/grid',
+    meta: {
+      title: 'Grid 栅格'
+    },
     component: () =>
       import ('../views/Grid.vue')
   },
   {
     path: '/color',
+    meta: {
+      title: 'Color 色彩'
+    },
     component: () =>
       import ('../views/Color.vue')
   },
+  {
+    path: '/list',
+    meta: {
+      title: 'List 列表'
+    },
+    component: () =>
+      import ('../views/List.vue')
+  },
+
 ]
 
 export default new Router({

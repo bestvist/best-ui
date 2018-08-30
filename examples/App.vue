@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <b-layout class="container">
-      <b-header>header</b-header>
+      <b-header>Best UI</b-header>
       <b-layout horizontal>
         <b-slider id="nav" :width="'200px'">
-          <ul>
+          <!-- <ul>
             <li v-for="(item,index) in nav" :key="index">
-              <router-link :to="'/'+item.link">{{item.title}}</router-link>
+              <router-link :to="item.path">{{item.meta.title}}</router-link>
             </li>
-          </ul>
+          </ul> -->
+          <b-list>
+              <b-list-item v-for="(item,index) in nav" :key="index" :to="item.path">{{item.meta.title}}</b-list-item>
+          </b-list>
         </b-slider>
         <b-content>
           <router-view/>
@@ -22,30 +25,15 @@
 </template>
 
 <script>
-const nav = [
-    {
-        title: "Home 主页",
-        link: ""
-    },
-    {
-        title: "Layout 布局",
-        link: "layout"
-    },
-    {
-        title: "Grid 栅格",
-        link: "grid"
-    },
-    {
-        title: "Color 色彩",
-        link: "color"
-    }
-];
 
 export default {
     data() {
         return {
-            nav: nav
+            nav: []
         };
+    },
+    mounted() {
+        this.nav = this.$router.options.routes;
     }
 };
 </script>
@@ -57,7 +45,9 @@ export default {
 }
 
 #nav {
+    padding-left: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+
     ul {
         list-style: none;
     }

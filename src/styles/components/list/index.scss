@@ -1,0 +1,25 @@
+@include b(list) {
+    margin: 0;
+    padding: 10px 0;
+
+    @include b(list) {
+        padding: 0;
+    }
+
+    @include when(nested) {
+        padding-left: 15px;
+    }
+}
+
+@include b(list-item) {
+    &>a {
+        height: 40px;
+        line-height: 40px;
+        white-space: nowrap;
+        color: $color-text-primary;
+    }
+
+    @include e-inner() {
+        display: block;
+    }
+}

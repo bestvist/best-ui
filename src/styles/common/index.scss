@@ -1,13 +1,19 @@
 /*
  * common style
  */
-* {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
+}
+
+* {
+    outline: none;
 }
 
 html,
 body {
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: $font-family;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -21,5 +27,6 @@ ol {
 
 a {
     text-decoration: none;
+    cursor: pointer;
     color: $color-primary;
 }

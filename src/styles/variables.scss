@@ -1,4 +1,5 @@
 $prefix: 'b';
+$state-prefix:'is';
 $white: #fff !default;
 $dark: #000 !default;
 /* 
@@ -8,9 +9,14 @@ $color-primary: #ff9800 !default;
 $color-light-primary: #ffe0b2 !default;
 $color-dark-primary: #e65100 !default;
 $color-text-primary: #5f5f5f;
-$padding: 10px;
-$font-size: 14px;
 $bg: #f5f5f5;
+/* 
+ * font
+*/
+$font-family:"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+$font-size: 14px;
+
+$padding: 10px;
 /* 
 * shadow
 */

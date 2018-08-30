@@ -18,7 +18,7 @@ const components = [
 
 Layout.install = function (Vue) {
     components.forEach(c => {
-        Vue.component(c.name, Layout);
+        Vue.component(c.name, c);
     })
 }
 
