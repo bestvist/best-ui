@@ -38,7 +38,7 @@ Vue.use(BestUI);
 - Progress 进度条
 - Tree 树形
 - Pagination 分页
-- NavMenu 导航
+- List 导航
 - TextScroll 文字滚动
 - ZoomPicture 图片放大
 - Steps 步骤条

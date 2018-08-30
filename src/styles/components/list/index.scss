@@ -13,9 +13,8 @@
 
 @include b(list-item) {
     &>a {
-        height: 40px;
-        line-height: 40px;
-        white-space: nowrap;
+        height: 30px;
+        line-height: 30px;
         color: $color-text-primary;
     }
 
