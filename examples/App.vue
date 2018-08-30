@@ -4,11 +4,6 @@
       <b-header>Best UI</b-header>
       <b-layout horizontal>
         <b-slider id="nav" :width="'200px'">
-          <!-- <ul>
-            <li v-for="(item,index) in nav" :key="index">
-              <router-link :to="item.path">{{item.meta.title}}</router-link>
-            </li>
-          </ul> -->
           <b-list>
               <b-list-item v-for="(item,index) in nav" :key="index" :to="item.path">{{item.meta.title}}</b-list-item>
           </b-list>
