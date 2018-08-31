@@ -24,7 +24,7 @@ Vue.use(BestUI);
 - [x] Color 色彩
 - Icon 图标
 - Input 输入框
-- Button 按钮
+- [x] Button 按钮
 - Checkbox 多选框
 - Radio 单选框
 - Select 选择器
