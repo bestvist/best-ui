@@ -1,0 +1,115 @@
+@include b(button) {
+    display: inline-block;
+    position: relative;
+    min-width: $button-min-width;
+    padding: $button-padding;
+    border: none;
+    border-radius: $button-radius;
+    vertical-align: middle;
+    font-size: $font-size;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: $color-text-primary;
+    background-color: $white;
+    box-shadow: $button-shadow;
+    transition: .1s;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+        color: $color-primary;
+    }
+
+    &:active {
+        color: $color-dark-primary;
+        box-shadow: $shadow-deep-xy;
+    }
+
+    @include when(round) {
+        border-radius: $button-round;
+    }
+
+    @include when(circle) {
+        padding: 10px;
+        border-radius: $button-circle;
+    }
+
+    @include when(full) {
+        width: 100%;
+    }
+
+    @include when(disabled) {
+        cursor: not-allowed;
+        color: $color-text-ignore;
+    }
+
+    @include m(primary) {
+        @include btn-modify($white, $color-primary, $button-shadow);
+    }
+
+    @include m(success) {
+        @include btn-modify($white, $color-success, $button-shadow);
+    }
+
+    @include m(warning) {
+        @include btn-modify($white, $color-warning, $button-shadow);
+    }
+
+    @include m(danger) {
+        @include btn-modify($white, $color-danger, $button-shadow);
+    }
+
+    @include m(info) {
+        @include btn-modify($white, $color-info, $button-shadow);
+    }
+
+    @include m(text) {
+        @include btn-modify(inherit, transparent, none);
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+
+        &:active {
+            color: $color-dark-primary;
+            box-shadow: none;
+        }
+
+        @include when(disabled) {
+            color: $color-text-ignore;
+        }
+    }
+
+    @include m(large) {
+        padding: $button-large-padding;
+
+        @include when(circle) {
+            padding: 15px;
+            border-radius: $button-circle;
+        }
+    }
+
+    @include m(small) {
+        min-width: $button-small-min-width;
+        padding: $button-small-padding;
+
+        @include when(circle) {
+            padding: 5px;
+            border-radius: $button-circle;
+        }
+    }
+
+    @include m(mini) {
+        min-width: $button-mini-min-width;
+        padding: $button-mini-padding;
+
+        @include when(circle) {
+            padding: 2px;
+            border-radius: $button-circle;
+        }
+    }
+}

@@ -7,9 +7,7 @@
 <script>
 function getSize(size) {
     if (!size) return 0;
-    const index = size.indexOf("px");
-    if (index === -1) return 0;
-    return Number(size.substring(0, index));
+    return Number(size.replace('px',''));
 }
 export default {
     name: "BCollapseTransition",

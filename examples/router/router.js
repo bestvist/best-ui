@@ -36,6 +36,22 @@ const routes = [{
       import ('../views/Color.vue')
   },
   {
+    path: '/icon',
+    meta: {
+      title: 'Icon 图标'
+    },
+    component: () =>
+      import ('../views/Icon.vue')
+  },
+  {
+    path: '/button',
+    meta: {
+      title: 'Button 图标'
+    },
+    component: () =>
+      import ('../views/Button.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'

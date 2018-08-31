@@ -7,7 +7,5 @@ module.exports = {
         index: {
             entry: 'examples/main.js',
         }
-    },
-    css: {
     }
 }

@@ -1,0 +1,20 @@
+@mixin btn-modify($color, $bg-color, $shadow) {
+    color: $color;
+    background-color: $bg-color;
+    box-shadow: $shadow;
+
+    &:hover,
+    &:focus {
+        color: $color;
+        background-color: lighten($bg-color, 10%);
+    }
+
+    &:active{
+        background-color: darken($bg-color, 5%);
+    }
+
+    @include when(disabled){
+        color: $white;
+        background-color: lighten($bg-color, 15%);
+    }
+}
