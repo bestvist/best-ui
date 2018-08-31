@@ -10,6 +10,7 @@ export default {
         type: String,
         round: Boolean,
         circle: Boolean,
+        flat: Boolean,
         full: Boolean,
         disabled: Boolean,
         loading: Boolean,
@@ -25,6 +26,7 @@ export default {
                 "is-loading": this.loading,
                 "is-round": this.round,
                 "is-circle": this.circle,
+                "is-flat": this.flat,
                 "is-full": this.full
             };
         }

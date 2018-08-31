@@ -20,13 +20,17 @@
         <div class="panel">
             <b-button class="docs-button" v-for="(item,index) in button3" :key="index" circle :size="item.size">{{item.label}}</b-button>
         </div>
+        <!-- flat -->
+        <div class="panel">
+            <b-button class="docs-button" v-for="(item,index) in button1" :key="index" flat :type="item.type">{{item.label}}</b-button>
+        </div>
         <!-- full -->
         <div class="panel">
             <b-button class="docs-button" full>full</b-button>
         </div>
         <!-- disabled -->
         <div class="panel">
-                <b-button class="docs-button" v-for="(item,index) in button1" :key="index" disabled :type="item.type">{{item.label}}</b-button>
+            <b-button class="docs-button" v-for="(item,index) in button1" :key="index" disabled :type="item.type">{{item.label}}</b-button>
         </div>
     </div>
 </template>
