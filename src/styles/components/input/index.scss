@@ -46,6 +46,8 @@
     @include e-m(error-msg) {
         position: absolute;
         top: 100%;
+        line-height: 20px;
+        color: $color-danger;
     }
 }
 
