@@ -1,14 +1,27 @@
+@mixin prefix-suffix{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    line-height: inherit;
+} 
+
 @include b(input) {
+    position: relative;
     display: flex;
     flex: 1;
     width: $input-width;
+    font-size: $font-size;
+    line-height: $input-line-height;
 
     @include e-m(inner) {
+        display: inline-block;
+        width: 100%;
         padding: 0 $padding;
         border: none;
         border-bottom: $border;
-        line-height: $input-line-height;
-        font-size: $font-size;
+        font-size: inherit;
+        line-height: inherit;
+        transition: all ease 0.3s 0s;
 
         &:hover {
             border-color: darken($border-color, 10%);
@@ -16,16 +29,29 @@
 
         &:focus {
             border-color: $color-light-primary;
+            box-shadow: $input-shadow-focus;
         }
+    }  
+
+    @include e-m(prefix) {
+        @include prefix-suffix;
+        left: 5px;
+    }
+
+    @include e-m(suffix) {
+        @include prefix-suffix;
+        right: 5px;
     }
 }
 
 @include b(textarea) {
     @include e-m(inner) {
+        display: block;
+        height: $textarea-height;
         padding: $padding;
         border: $border;
         line-height: 20px;
-        font-size: $font-size;
+        font-size: inherit;
         border-radius: $input-radius;
         resize: none;
 
@@ -35,9 +61,10 @@
 
         &:focus {
             border-color: $color-light-primary;
+            box-shadow: $textarea-shadow-focus;
         }
 
-        @include m(resize) {
+        @include when(resize) {
             resize: auto;
         }
     }

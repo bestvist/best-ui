@@ -52,7 +52,7 @@ $shadow: 0 0 10px rgba(0, 0, 0, .1);
 $shadow-x: 3px 0 10px rgba(0, 0, 0, .1);
 $shadow-y: 0 3px 10px rgba(0, 0, 0, .1);
 $shadow-xy: 3px 3px 10px rgba(0, 0, 0, .1);
-$shadow-deep: 0 0 10px rgba(0, 0, 0, .4);
+$shadow-deep: 0 0 10px rgba(206, 178, 178, 0.4);
 $shadow-deep-x: 3px 0 10px rgba(0, 0, 0, .4);
 $shadow-deep-y: 0 3px 10px rgba(0, 0, 0, .4);
 $shadow-deep-xy: 3px 3px 10px rgba(0, 0, 0, .4);
@@ -79,8 +79,9 @@ $button-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
 /* 
 * input
 */
-$input-width: 200px;
+$input-width: 300px;
 $input-line-height: 30px;
 $input-radius: $radius;
-$input-shadow: 0 1px 0 rgba(0, 0, 0, .2);
-$input-shadow-dark: 0 1px 0 rgba(0, 0, 0, .5);
+$input-shadow-focus: 0 2px 0 rgba(255, 173, 51, .2);
+$textarea-height: 80px;
+$textarea-shadow-focus: 0 0 2px rgba(255, 173, 51, .2);
