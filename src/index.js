@@ -1,6 +1,7 @@
 import './styles/index.scss';
 
 import Button from '../components/button';
+import Checkbox from '../components/checkbox';
 import Col from '../components/col';
 import Content from '../components/content';
 import Footer from '../components/footer';
@@ -16,6 +17,7 @@ import Transition from '../components/transition';
 
 const components = [
     Button,
+    Checkbox,
     Col,
     Content,
     Footer,

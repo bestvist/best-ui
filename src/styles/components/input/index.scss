@@ -1,9 +1,9 @@
-@mixin prefix-suffix{
+@mixin prefix-suffix {
     position: absolute;
     top: 0;
     height: 100%;
     line-height: inherit;
-} 
+}
 
 @include b(input) {
     position: relative;
@@ -31,7 +31,7 @@
             border-color: $color-light-primary;
             box-shadow: $input-shadow-focus;
         }
-    }  
+    }
 
     @include e-m(prefix) {
         @include prefix-suffix;
@@ -41,6 +41,11 @@
     @include e-m(suffix) {
         @include prefix-suffix;
         right: 5px;
+    }
+
+    @include e-m(error-msg) {
+        position: absolute;
+        top: 100%;
     }
 }
 

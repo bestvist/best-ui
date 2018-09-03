@@ -47,6 +47,7 @@
             @compositionstart="handleComposition"
             @compositionupdate="handleComposition"
             @compositionend="handleComposition"></textarea>
+            <span class="b-input__error-msg" v-if="errorMsg"></span>
     </div>
 </template>
 
@@ -84,7 +85,8 @@ export default {
         prefix: String,
         suffix: String,
         prefixIcon: String,
-        suffixIcon: String
+        suffixIcon: String,
+        errorMsg:''
     },
     data() {
         return {
