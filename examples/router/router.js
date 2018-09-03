@@ -52,6 +52,14 @@ const routes = [{
       import ('../views/Button.vue')
   },
   {
+    path: '/input',
+    meta: {
+      title: 'Input 输入框'
+    },
+    component: () =>
+      import ('../views/Input.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'

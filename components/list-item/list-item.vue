@@ -1,14 +1,21 @@
 <template>
     <li class="b-list-item">
-        <router-link v-if="to" class="b-list-item__inner" :to="to" :class="className">
+        <router-link v-if="to"
+            class="b-list-item__inner"
+            :to="to"
+            :class="className">
             <slot></slot>
         </router-link>
 
-        <a v-else class="b-list-item__inner" @click="handleClick" :class="className">
+        <a v-else
+            class="b-list-item__inner"
+            @click="handleClick"
+            :class="className">
             <slot></slot>
         </a>
         <b-collapse-transition>
-            <slot name="children" v-if="open"></slot>
+            <slot name="children"
+                v-if="open"></slot>
         </b-collapse-transition>
     </li>
 </template>

@@ -1,0 +1,44 @@
+@include b(input) {
+    display: flex;
+    flex: 1;
+    width: $input-width;
+
+    @include e-m(inner) {
+        padding: 0 $padding;
+        border: none;
+        border-bottom: $border;
+        line-height: $input-line-height;
+        font-size: $font-size;
+
+        &:hover {
+            border-color: darken($border-color, 10%);
+        }
+
+        &:focus {
+            border-color: $color-light-primary;
+        }
+    }
+}
+
+@include b(textarea) {
+    @include e-m(inner) {
+        padding: $padding;
+        border: $border;
+        line-height: 20px;
+        font-size: $font-size;
+        border-radius: $input-radius;
+        resize: none;
+
+        &:hover {
+            border-color: darken($border-color, 10%);
+        }
+
+        &:focus {
+            border-color: $color-light-primary;
+        }
+
+        @include m(resize) {
+            resize: auto;
+        }
+    }
+}

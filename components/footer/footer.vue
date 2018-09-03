@@ -1,5 +1,6 @@
 <template>
-    <footer class="b-footer" :style="{height:height}">
+    <footer class="b-footer"
+        :style="{height:height}">
         <slot></slot>
     </footer>
 </template>

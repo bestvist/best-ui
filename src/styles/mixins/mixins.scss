@@ -39,8 +39,8 @@
     }
 }
 
-@mixin e-inner {
-    $currentSelector: #{'.'+ $B + '__inner'};
+@mixin e-m($modifier) {
+    $currentSelector: #{'.'+ $B + '__' + $modifier};
 
     @at-root {
         #{$currentSelector} {

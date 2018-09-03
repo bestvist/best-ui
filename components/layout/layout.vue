@@ -1,5 +1,6 @@
 <template>
-    <section class="b-layout" :class="{'is-horizontal':horizontal}">
+    <section class="b-layout"
+        :class="{'is-horizontal':horizontal}">
         <slot></slot>
     </section>
 </template>

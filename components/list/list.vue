@@ -1,5 +1,6 @@
 <template>
-    <ul class="b-list" :class="className">
+    <ul class="b-list"
+        :class="className">
         <slot></slot>
     </ul>
 </template>
@@ -13,9 +14,9 @@ export default {
             let parent = this.$parent.$parent; // this.$parent: transition
             return parent && parent.$options.componentName === "BListItem";
         },
-        className(){
+        className() {
             return {
-                'is-nested': this.nested
+                "is-nested": this.nested
             };
         }
     }

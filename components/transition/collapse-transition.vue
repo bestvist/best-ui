@@ -1,5 +1,11 @@
 <template>
-    <transition name="b-collapse" @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave">
+    <transition name="b-collapse"
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @after-enter="afterEnter"
+        @before-leave="beforeLeave"
+        @leave="leave"
+        @after-leave="afterLeave">
         <slot></slot>
     </transition>
 </template>
@@ -7,7 +13,7 @@
 <script>
 function getSize(size) {
     if (!size) return 0;
-    return Number(size.replace('px',''));
+    return Number(size.replace("px", ""));
 }
 export default {
     name: "BCollapseTransition",

@@ -1,5 +1,6 @@
 <template>
-    <header class="b-header" :style="{height:height}">
+    <header class="b-header"
+        :style="{height:height}">
         <slot></slot>
     </header>
 </template>

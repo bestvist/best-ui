@@ -1,5 +1,6 @@
 <template>
-    <div class="b-row" :style="style">
+    <div class="b-row"
+        :style="style">
         <slot></slot>
     </div>
 </template>
@@ -7,7 +8,7 @@
 <script>
 export default {
     name: "BRow",
-    componentName: 'BRow',
+    componentName: "BRow",
     props: {
         gutter: Number
     },

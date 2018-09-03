@@ -1,5 +1,6 @@
 <template>
-    <aside class="b-slider" :style="{width:width}">
+    <aside class="b-slider"
+        :style="{width:width}">
         <slot></slot>
     </aside>
 </template>

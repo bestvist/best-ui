@@ -1,5 +1,6 @@
 <template>
-    <i class="b-icon" :class="className">
+    <i class="b-icon"
+        :class="className">
         <slot></slot>
     </i>
 </template>

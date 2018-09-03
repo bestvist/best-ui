@@ -1,5 +1,7 @@
 <template>
-    <div class="b-col" :class="className" :style="style">
+    <div class="b-col"
+        :class="className"
+        :style="style">
         <slot></slot>
     </div>
 </template>
