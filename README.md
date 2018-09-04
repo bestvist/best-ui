@@ -27,8 +27,8 @@ Vue.use(BestUI);
 - [x] Button 按钮
 - [x] Checkbox 多选框
 - [x] Radio 单选框
-- Select 选择器
 - Switch 开关
+- Select 选择器
 - DatePicker 日期选择
 - ColorPicker 颜色选择
 - Time 相对时间

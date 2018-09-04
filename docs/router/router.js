@@ -76,6 +76,14 @@ const routes = [{
       import ('../views/Radio.vue')
   },
   {
+    path: '/switch',
+    meta: {
+      title: 'Switch 转换框'
+    },
+    component: () =>
+      import ('../views/Switch.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'
