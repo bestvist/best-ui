@@ -1,4 +1,4 @@
-@include b(checkbox) {
+@include b(radio) {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -10,65 +10,43 @@
         position: relative;
         display: inline-block;
         z-index: 1;
-        width: 15px;
-        height: 15px;
-        border-radius: $checkbox-radius;
+        width: 14px;
+        height: 14px;
+        border: 1px solid $white;
+        border-radius: $radio-radius;
         vertical-align: middle;
         background-color: $white;
         transition: all cubic-bezier(.71, -.46, .29, 1.46) .3s 0s;
-        box-shadow: $checkbox-shadow;
+        box-shadow: $radio-shadow;
 
         // checked
         &:after {
             content: "";
             position: absolute;
-            top: 2px;
-            left: 5px;
-            width: 5px;
-            height: 9px;
-            border: 1px solid $white;
-            border-left: 0;
-            border-top: 0;
-            transform: rotate(45deg) scaleY(0);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: $radio-radius;
+            background-color: $color-primary;
+            transform: scale(0);
             transition: transform .15s ease-in .05s;
             transform-origin: center;
         }
 
-        // intermediate
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 6px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: $white;
-            transform: scale(0);
-            transition: transform .15s ease-in .05s;
-        }
-
         @include when(checked) {
-            background-color: $color-primary;
-
+            border-color: $color-primary;
             &:after {
-                transform: rotate(45deg) scaleY(1);
-            }
-        }
-
-        @include when(intermediate) {
-            background-color: $color-primary;
-
-            &:before {
-                transform: scale(.5);
+                transform: scale(.6);
             }
         }
 
         @include when(disabled) {
+            border-color: $border-color;
             background-color: lighten($border-color, 15%);
 
             &:after {
-                border-color: darken($border-color, 10%);
+                background-color: darken($border-color, 10%);
             }
         }
     }
@@ -85,7 +63,7 @@
 
     @include e-m(label) {
         display: inline-block;
-        padding-left: $checkbox-padding;
+        padding-left: $radio-padding;
         vertical-align: middle;
     }
 

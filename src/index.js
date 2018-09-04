@@ -11,6 +11,7 @@ import Input from '../components/input';
 import Layout from '../components/layout';
 import List from '../components/list';
 import ListItem from '../components/list-item';
+import Radio from '../components/radio';
 import Row from '../components/row';
 import Slider from '../components/slider';
 import Transition from '../components/transition';
@@ -27,6 +28,7 @@ const components = [
     Layout,
     List,
     ListItem,
+    Radio,
     Row,
     Slider,
     Transition,

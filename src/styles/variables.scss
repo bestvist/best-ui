@@ -88,5 +88,12 @@ $textarea-shadow-focus: 0 0 2px rgba(255, 173, 51, .2);
 /*
 * checkbox
 */
+$checkbox-padding: 10px;
 $checkbox-radius: 2px;
 $checkbox-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+/*
+* radio
+*/
+$radio-padding: 10px;
+$radio-radius: 50%;
+$radio-shadow: 1px 1px 3px rgba(0, 0, 0, .3);

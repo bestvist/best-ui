@@ -20,7 +20,7 @@
 export default {
     data() {
         return {
-            value: ""
+            value: "input"
         };
     },
     mounted() {

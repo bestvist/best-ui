@@ -68,6 +68,14 @@ const routes = [{
       import ('../views/Checkbox.vue')
   },
   {
+    path: '/radio',
+    meta: {
+      title: 'Radio 单选框'
+    },
+    component: () =>
+      import ('../views/Radio.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'

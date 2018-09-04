@@ -26,14 +26,12 @@ export default {
         return {
             checkboxValue: true
         };
-    },
-    methods: {
-        handleClick() {
-            console.log(this.checkboxValue);
-        }
     }
 };
 </script>
 
 <style lang="scss">
+.b-checkbox + .b-checkbox {
+    margin-left: 20px;
+}
 </style>
