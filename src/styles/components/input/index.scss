@@ -49,6 +49,10 @@
         line-height: 20px;
         color: $color-danger;
     }
+
+    @include when(error){
+        margin-bottom: 20px;
+    }
 }
 
 @include b(textarea) {

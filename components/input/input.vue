@@ -1,5 +1,6 @@
 <template>
-    <div class="b-input">
+    <div class="b-input"
+        :class="className">
         <template v-if="type!=='textarea'">
             <span v-if="prefix"
                 ref="prefix"
@@ -30,7 +31,7 @@
         <textarea v-else
             class="b-textarea__inner"
             :style="{'height':height}"
-            :class="className"
+            :class="classNameTextarea"
             :value="value"
             :name="name"
             :minlength="min"
@@ -100,6 +101,11 @@ export default {
     },
     computed: {
         className() {
+            return {
+                "is-error": this.errorMsg
+            };
+        },
+        classNameTextarea() {
             return {
                 "is-resize": this.resize
             };
