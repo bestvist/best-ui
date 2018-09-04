@@ -60,6 +60,14 @@ const routes = [{
       import ('../views/Input.vue')
   },
   {
+    path: '/checkbox',
+    meta: {
+      title: 'Checkbox 复选框'
+    },
+    component: () =>
+      import ('../views/Checkbox.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'
