@@ -1,7 +1,8 @@
 const path = require('path')
 
 module.exports = {
-    outputDir: 'dist',
+    baseUrl: process.env.NODE_ENV === 'production' ? '/docs-dist/' : '/',
+    outputDir: 'docs-dist',
     filenameHashing: false,
     pages: {
         index: {
