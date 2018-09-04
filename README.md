@@ -25,7 +25,7 @@ Vue.use(BestUI);
 - Icon 图标
 - [x] Input 输入框
 - [x] Button 按钮
-- Checkbox 多选框
+- [x] Checkbox 多选框
 - Radio 单选框
 - Select 选择器
 - Switch 开关
