@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-a600"],{"491c":function(e,n,t){"use strict";t.r(n);var c=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[t("div",{staticClass:"panel"},[t("b-checkbox",{attrs:{label:"复选框"}})],1)])},a=[],s=(t("cadf"),t("551c"),t("097d"),{}),i=s,l=(t("76f1"),t("2877")),u=Object(l["a"])(i,c,a,!1,null,null,null);u.options.__file="Checkbox.vue";n["default"]=u.exports},"4ebd":function(e,n,t){},"76f1":function(e,n,t){"use strict";var c=t("4ebd"),a=t.n(c);a.a}}]);
+//# sourceMappingURL=chunk-a600.js.map

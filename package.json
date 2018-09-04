@@ -23,7 +23,7 @@
     "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name bestui src/index.js",
-    "build:docs": "vue-cli-service build --name bestui examples/main.js",
+    "build:docs": "vue-cli-service build --name bestui docs/main.js",
     "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
