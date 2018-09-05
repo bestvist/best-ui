@@ -3,10 +3,10 @@
         <div class="panel">
             <b-radio label="1"
                 v-model="radio1"
-                @click="handleClick">单选框</b-radio>
+                @click="handleClick"
+                @change="handleChange">单选框</b-radio>
             <b-radio label="2"
-                v-model="radio1"
-                @click="handleClick">单选框</b-radio>
+                v-model="radio1">单选框</b-radio>
         </div>
 
         <div class="panel">
@@ -22,14 +22,21 @@
 export default {
     data() {
         return {
-            radio1: "1",
-            value: true
+            radio1: "1"
         };
     },
     methods: {
         handleClick() {
-            console.log(this.radio1);
+            console.log("click", this.radio1);
+        },
+        handleChange() {
+            console.log("change", this.radio1);
         }
+    },
+    mounted() {
+        setInterval(() => {
+            this.radio1 = this.radio1 == '1' ? '2' : '1';
+        },1000);
     }
 };
 </script>

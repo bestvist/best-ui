@@ -51,8 +51,7 @@ export default {
     },
     methods: {
         handleClick(e) {
-            const reg = /input/i;
-            if (reg.test(e.target.tagName) && !this.disabled) {
+            if (/input/i.test(e.target.tagName)&&!this.disabled) {
                 this.$nextTick(() => {
                     this.$emit("click", e);
                 });

@@ -1,5 +1,5 @@
 <template>
-    <label class="b-checkbox"
+    <div class="b-checkbox"
         :class="classNameCheckbox"
         role="checkbox"
         @click="handleClick">
@@ -19,7 +19,7 @@
             <slot></slot>
             <template v-if="!$slots.default">{{label}}</template>
         </span>
-    </label>
+    </div>
 </template>
 
 <script>

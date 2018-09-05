@@ -2,7 +2,8 @@
     <div>
         <div class="panel">
             <b-checkbox label="复选框"
-                checked></b-checkbox>
+                @change="handleChange"
+                v-model="value"></b-checkbox>
         </div>
 
         <div class="panel">
@@ -24,8 +25,18 @@
 export default {
     data() {
         return {
-            checkboxValue: true
+            value: false
         };
+    },
+    methods: {
+        handleChange(){
+            console.log('change')
+        }
+    },
+    mounted() {
+        setTimeout(() => {
+            this.value = true;
+        }, 1000);
     }
 };
 </script>

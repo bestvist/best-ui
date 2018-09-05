@@ -7,13 +7,12 @@
             :class="classNameInner">
         </span>
         <input class="b-checkbox__input"
-            type="checkbox"
+            type="text"
             aria-hidden="true"
             :name="name"
-            :value="value"
+            :value="label"
             :disabled="disabled"
-            @input="handleInput"
-            @change="handleChange">
+            :checked="currentValue">
         <span class="b-checkbox__label"
             v-if="$slots.default || label">
             <slot></slot>
@@ -29,13 +28,14 @@ export default {
     props: {
         label: String,
         name: String,
+        value: Boolean,
         checked: Boolean,
         disabled: Boolean,
         intermediate: Boolean
     },
     data() {
         return {
-            value: false
+            currentValue: false
         };
     },
     computed: {
@@ -46,29 +46,34 @@ export default {
         },
         classNameInner() {
             return {
-                "is-checked": this.value,
+                "is-checked": this.currentValue,
                 "is-disabled": this.disabled,
-                "is-intermediate": this.intermediate && !this.value
+                "is-intermediate": this.intermediate && !this.currentValue
             };
+        }
+    },
+    watch: {
+        value() {
+            if (this.currentValue !== this.value) {
+                this.currentValue = this.value;
+            }
+        },
+        currentValue() {
+            const val = this.currentValue;
+            this.$emit("input", val);
+            this.$emit("change", val);
         }
     },
     methods: {
         handleClick(e) {
-            const reg = /input/i;
-            if (reg.test(e.target.tagName) && !this.disabled) {
-                this.value = !this.value;
+            if (/input/i.test(e.target.tagName) && !this.disabled) {
+                this.currentValue = !this.currentValue;
                 this.$emit("click", e);
             }
-        },
-        handleChange(e) {
-            this.$emit("change", e.target.checked, e);
-        },
-        handleInput(e) {
-            this.$emit("input", e.target.checked, e);
         }
     },
     created() {
-        this.value = this.checked || this.value;
+        this.currentValue = this.checked || this.value;
     }
 };
 </script>
