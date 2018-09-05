@@ -34,9 +34,6 @@ export default {
         }
     },
     mounted() {
-        setInterval(() => {
-            this.radio1 = this.radio1 == '1' ? '2' : '1';
-        },1000);
     }
 };
 </script>

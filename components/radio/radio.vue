@@ -1,6 +1,6 @@
 <template>
     <label class="b-radio"
-        :class="classNameCheckbox"
+        :class="className"
         role="radio"
         @click="handleClick">
         <span class="b-radio__inner"
@@ -13,7 +13,6 @@
             :value="label"
             :checked="value === label"
             :disabled="disabled"
-            @input="handleInput"
             @change="handleChange">
         <span class="b-radio__label">
             <slot></slot>
@@ -26,6 +25,9 @@
 export default {
     name: "BRadio",
     componentName: "BRadio",
+    model: {
+        event: "change"
+    },
     props: {
         label: String,
         value: {},
@@ -37,7 +39,7 @@ export default {
         return {};
     },
     computed: {
-        classNameCheckbox() {
+        className() {
             return {
                 "is-disabled": this.disabled
             };
@@ -51,7 +53,7 @@ export default {
     },
     methods: {
         handleClick(e) {
-            if (/input/i.test(e.target.tagName)&&!this.disabled) {
+            if (/input/i.test(e.target.tagName) && !this.disabled) {
                 this.$nextTick(() => {
                     this.$emit("click", e);
                 });
@@ -59,9 +61,6 @@ export default {
         },
         handleChange(e) {
             this.$emit("change", this.label, e);
-        },
-        handleInput(e) {
-            this.$emit("input", this.label, e);
         }
     }
 };

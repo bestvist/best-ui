@@ -7,6 +7,7 @@
                 class="b-input__prefix">{{prefix}}</span>
             <input ref="input"
                 class="b-input__inner"
+                v-bind="$attrs"
                 :value="value"
                 :name="name"
                 :minlength="min"
@@ -20,7 +21,7 @@
                 @input="handleInput"
                 @focus="handleFocus"
                 @blur="handleBlur"
-                @chang="handleChange"
+                @change="handleChange"
                 @compositionstart="handleComposition"
                 @compositionupdate="handleComposition"
                 @compositionend="handleComposition" />
@@ -30,6 +31,7 @@
         </template>
         <textarea v-else
             class="b-textarea__inner"
+            v-bind="$attrs"
             :style="{'height':height}"
             :class="classNameTextarea"
             :value="value"
@@ -44,7 +46,7 @@
             @input="handleInput"
             @focus="handleFocus"
             @blur="handleBlur"
-            @chang="handleChange"
+            @change="handleChange"
             @compositionstart="handleComposition"
             @compositionupdate="handleComposition"
             @compositionend="handleComposition"></textarea>
@@ -95,8 +97,7 @@ export default {
         return {
             currentValue:
                 this.value === void 0 || this.value === null ? "" : this.value,
-            isOnComposition: false,
-            valueBeforeComposition: null
+            isOnComposition: false
         };
     },
     computed: {
@@ -114,7 +115,6 @@ export default {
     methods: {
         handleInput(e) {
             const value = e.target.value;
-            this.setCurrentValue(value);
             if (this.isOnComposition) return;
             this.$emit("input", value);
         },
@@ -130,22 +130,12 @@ export default {
         handleComposition(e) {
             if (e.type === "compositionend") {
                 this.isOnComposition = false;
-                this.currentValue = this.valueBeforeComposition;
-                this.valueBeforeComposition = null;
                 this.handleInput(e);
             } else {
                 const value = e.target.value;
                 const lastChar = value[value.length - 1] || "";
                 this.isOnComposition = !isKorean(lastChar);
-                if (this.isOnComposition && e.type === "compositionstart") {
-                    this.valueBeforeComposition = value;
-                }
             }
-        },
-        setCurrentValue(value) {
-            if (this.isOnComposition && value === this.valueBeforeComposition)
-                return;
-            this.currentValue = value;
         },
         computeOffset($input, place) {
             const rect =

@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="panel">
-            <b-input v-model="value"></b-input>
+            <b-input v-model="value"
+                @input="handleInput"></b-input>
         </div>
         <div class="panel">
             <b-input type="textarea"></b-input>
@@ -23,8 +24,12 @@ export default {
             value: "input"
         };
     },
-    mounted() {
-    }
+    methods: {
+        handleInput() {
+            console.log(this.value);
+        }
+    },
+    mounted() {}
 };
 </script>
 <style lang="scss">

@@ -1,18 +1,19 @@
 <template>
     <label class="b-checkbox"
-        :class="classNameCheckbox"
+        :class="className"
         role="checkbox"
         @click="handleClick">
         <span class="b-checkbox__inner"
             :class="classNameInner">
         </span>
         <input class="b-checkbox__input"
-            type="text"
+            type="checkbox"
             aria-hidden="true"
             :name="name"
             :value="label"
             :disabled="disabled"
-            :checked="currentValue">
+            :checked="currentValue"
+            @change="handleChange">
         <span class="b-checkbox__label"
             v-if="$slots.default || label">
             <slot></slot>
@@ -25,10 +26,13 @@
 export default {
     name: "BCheckbox",
     componentName: "BCheckbox",
+    model: {
+        prop: "checked",
+        event: "change"
+    },
     props: {
         label: String,
         name: String,
-        value: Boolean,
         checked: Boolean,
         disabled: Boolean,
         intermediate: Boolean
@@ -39,7 +43,7 @@ export default {
         };
     },
     computed: {
-        classNameCheckbox() {
+        className() {
             return {
                 "is-disabled": this.disabled
             };
@@ -52,28 +56,19 @@ export default {
             };
         }
     },
-    watch: {
-        value() {
-            if (this.currentValue !== this.value) {
-                this.currentValue = this.value;
-            }
-        },
-        currentValue() {
-            const val = this.currentValue;
-            this.$emit("input", val);
-            this.$emit("change", val);
-        }
-    },
     methods: {
         handleClick(e) {
             if (/input/i.test(e.target.tagName) && !this.disabled) {
                 this.currentValue = !this.currentValue;
                 this.$emit("click", e);
             }
+        },
+        handleChange(e){
+            this.$emit("change", this.currentValue, e);
         }
     },
     created() {
-        this.currentValue = this.checked || this.value;
+        this.currentValue = this.checked;
     }
 };
 </script>

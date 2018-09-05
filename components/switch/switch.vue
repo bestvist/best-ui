@@ -1,74 +1,72 @@
 <template>
-    <div class="b-checkbox"
-        :class="classNameCheckbox"
+    <label class="b-switch"
+        :class="className"
         role="checkbox"
         @click="handleClick">
-        <span class="b-checkbox__inner"
+        <span class="b-switch__inner"
             :class="classNameInner">
         </span>
-        <input class="b-checkbox__input"
+        <input class="b-switch__input"
             type="checkbox"
             aria-hidden="true"
             :name="name"
-            :value="value"
+            :value="label"
             :disabled="disabled"
-            @input="handleInput"
+            :checked="currentValue"
             @change="handleChange">
-        <span class="b-checkbox__label"
+        <span class="b-switch__label"
             v-if="$slots.default || label">
             <slot></slot>
             <template v-if="!$slots.default">{{label}}</template>
         </span>
-    </div>
+    </label>
 </template>
 
 <script>
 export default {
     name: "BSwitch",
     componentName: "BSwitch",
+    model: {
+        prop: "checked",
+        event: "change"
+    },
     props: {
         label: String,
         name: String,
         checked: Boolean,
-        disabled: Boolean,
-        intermediate: Boolean
+        disabled: Boolean
     },
     data() {
         return {
-            value: false
+            currentValue: false
         };
     },
     computed: {
-        classNameCheckbox() {
+        className() {
             return {
                 "is-disabled": this.disabled
             };
         },
         classNameInner() {
             return {
-                "is-checked": this.value,
-                "is-disabled": this.disabled,
-                "is-intermediate": this.intermediate && !this.value
+                "is-on": this.currentValue,
+                "is-disabled": this.disabled
             };
         }
     },
     methods: {
         handleClick(e) {
-            const reg = /input/i;
-            if (reg.test(e.target.tagName) && !this.disabled) {
-                this.value = !this.value;
+            if (/input/i.test(e.target.tagName) && !this.disabled) {
+                this.currentValue = !this.currentValue;
                 this.$emit("click", e);
             }
         },
         handleChange(e) {
-            this.$emit("change", e.target.checked, e);
-        },
-        handleInput(e) {
-            this.$emit("input", e.target.checked, e);
+            this.$emit("change", this.currentValue, e);
         }
     },
     created() {
-        this.value = this.checked || this.value;
+        this.currentValue = this.checked;
     }
 };
 </script>
