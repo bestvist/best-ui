@@ -1,6 +1,8 @@
 import './styles/index.scss';
 
 import Button from '../components/button';
+import Card from '../components/card';
+import CardContent from '../components/card-content';
 import Checkbox from '../components/checkbox';
 import Col from '../components/col';
 import Content from '../components/content';
@@ -19,6 +21,8 @@ import Transition from '../components/transition';
 
 const components = [
     Button,
+    Card,
+    CardContent,
     Checkbox,
     Col,
     Content,

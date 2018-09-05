@@ -22,5 +22,4 @@ Layout.install = function (Vue) {
     })
 }
 
-
 export default Layout;

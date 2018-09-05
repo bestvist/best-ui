@@ -1,0 +1,17 @@
+@include b(card) {
+    box-shadow: $shadow-xy;
+
+    @include e-m(header) {
+        padding: $card-padding;
+        font-size: $card-header-size;
+        $card-header: &;
+
+        @include e-m(content) {
+            $card-content: &;
+        }
+    }
+
+    @include e-m(content) {
+        padding: $card-padding;
+    }
+}

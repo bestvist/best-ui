@@ -84,6 +84,14 @@ const routes = [{
       import ('../views/Switch.vue')
   },
   {
+    path: '/card',
+    meta: {
+      title: 'Card 卡片'
+    },
+    component: () =>
+      import ('../views/Card.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'
