@@ -10,6 +10,7 @@ $color-success: #67C23A !default;
 $color-warning: #fdd835 !default;
 $color-danger: #F56C6C !default;
 $color-info: #565656 !default;
+$color-ignore: #ababab !default;
 /* light color */
 $color-light-primary: lighten($color-primary, 10%);
 $color-light-success: lighten($color-success, 10%);
@@ -97,3 +98,10 @@ $checkbox-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 $radio-padding: 10px;
 $radio-radius: 50%;
 $radio-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+/*
+* switch
+*/
+$switch-width: 40px;
+$switch-height: 20px;
+$switch-radius: 10px;
+$switch-shadow: 1px 1px 3px rgba(0, 0, 0, .1);

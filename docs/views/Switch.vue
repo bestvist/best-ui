@@ -1,7 +1,14 @@
 <template>
     <div>
         <div class="panel">
-            <b-switch checked v-model="value" @change="handleChange"></b-switch>
+            <b-switch v-model="value"
+                @change="handleChange"></b-switch>
+        </div>
+
+        <div class="panel">
+            <b-switch disabled></b-switch>
+            <b-switch disabled
+                checked></b-switch>
         </div>
     </div>
 </template>
@@ -13,18 +20,17 @@ export default {
             value: false
         };
     },
-    methods:{
-        handleChange(){
-            // console.log(this.value);
+    methods: {
+        handleChange() {
+            console.log(this.value);
         }
     },
-    mounted() {
-        // setInterval(() => {
-        //     this.value = !this.value;
-        // }, 1000);
-    }
+    mounted() {}
 };
 </script>
 
 <style lang="scss">
+.b-switch + .b-switch {
+    margin-left: 20px;
+}
 </style>
