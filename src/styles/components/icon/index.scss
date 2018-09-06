@@ -19,5 +19,9 @@
     display: inline-block;
 
     &-info:before { content: "\e61a"; }
-    &-error:before { content: "\e62c"; }
+    // &-error:before { content: "\e62c"; }
+}
+
+.b-icon-error{
+    background: url('./svg/error.svg') no-repeat;
 }

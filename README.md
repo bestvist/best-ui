@@ -32,7 +32,7 @@ Vue.use(BestUI);
 - DatePicker 日期选择
 - ColorPicker 颜色选择
 - Time 相对时间
-- Card 卡片
+- [x] Card 卡片
 - Table 表格
 - Tag 标签
 - Progress 进度条
