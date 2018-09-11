@@ -17,6 +17,7 @@ import Radio from '../components/radio';
 import Row from '../components/row';
 import Slider from '../components/slider';
 import Switch from '../components/switch';
+import Tag from '../components/tag';
 import Transition from '../components/transition';
 
 const components = [
@@ -37,6 +38,7 @@ const components = [
     Row,
     Slider,
     Switch,
+    Tag,
     Transition,
 ]
 
