@@ -22,7 +22,7 @@ Vue.use(BestUI);
 ## 基础
 - [x] Layout 布局
 - [x] Color 色彩
-- Icon 图标
+- [x] Icon 图标
 - [x] Input 输入框
 - [x] Button 按钮
 - [x] Checkbox 多选框
