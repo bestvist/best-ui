@@ -3,7 +3,7 @@
     <img width="120" src="./docs/logo.svg">
   </a>
 </p>
-<h1 align="center">Best-UI</h1>
+<h1 align="center">Best UI</h1>
 
 <p align="center">
   <a href="https://www.travis-ci.org/bestvist/best-ui">
