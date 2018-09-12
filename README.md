@@ -23,19 +23,20 @@
   </a>
 </p>
 
-vue组件框架
+> UI library for Vuejs
 
-# Links
+## Links
 
-* [文档](https://bestvist.github.io/best-ui/docs-dist/)
+* [Documentation](https://bestvist.github.io/best-ui/docs-dist/)
 * [Gitter](https://gitter.im/best-ui/best-ui)
+* [Issues](https://github.com/bestvist/best-ui/issues)
 
-# Install 
+## Install 
 ```
 npm install best-ui --save
 ```
 
-# Quick Start
+## Usage
 ```
 import Vue from 'vue';
 import BestUI from 'best-ui';
@@ -44,9 +45,9 @@ import 'best-ui/dist/bestui.css';
 Vue.use(BestUI);
 ```
 
-# TODO
+## TODO
 要做的事：
-## 基础
+### 基础
 - [x] Layout 布局
 - [x] Color 色彩
 - [x] Icon 图标
@@ -76,11 +77,27 @@ Vue.use(BestUI);
 - Collapse 折叠板
 - Timeline 时间轴
 
-## 服务组件
+### 服务组件
 - Loading 加载
 - Message 消息
 - Notification 通知
 - Dialog 对话框
 
-# LICENSE
+## Browser Support
+Modern browsers and Internet Explorer 10+.
+
+## Donation
+<div style="display:flex;align-items: center;">
+  <div>
+    <p></p>
+    <img sr="http://ox2ualtw3.bkt.clouddn.com/pay_wechat.png" />
+  </div>
+  <div>
+    <img src="http://ox2ualtw3.bkt.clouddn.com/pay_alipay.png" />
+  </div>
+</div>
+![Wechat](http://ox2ualtw3.bkt.clouddn.com/pay_wechat.png)
+![AliPay](http://ox2ualtw3.bkt.clouddn.com/pay_alipay.png)
+
+## LICENSE
 MIT
