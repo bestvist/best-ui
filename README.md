@@ -34,7 +34,7 @@ Vue.use(BestUI);
 - Time 相对时间
 - [x] Card 卡片
 - Table 表格
-- Tag 标签
+- [x] Tag 标签
 - Progress 进度条
 - Tree 树形
 - Pagination 分页
