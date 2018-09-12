@@ -1,3 +1,101 @@
-@include b(tag){
-    
+@include b(tag) {
+    display: inline-block;
+    padding: $tag-padding;
+    border-radius: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    background-color: $bg;
+    box-shadow: $shadow-xy;
+
+    @include e-m(delete) {
+        margin-left: 5px;
+        margin-right: -5px;
+        color: lighten($color-text-primary, 20%);
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    @include m(default) {
+        @include e-m(delete) {
+            &:hover {
+                color: $color-text-primary;
+            }
+        }
+    }
+
+    @include m(primary) {
+        color: $white;
+        background-color: $color-primary;
+
+        @include e-m(delete) {
+            color: darken($color-primary, 10%);
+
+            &:hover {
+                color: darken($color-primary, 20%);
+            }
+        }
+    }
+
+    @include m(success) {
+        color: $white;
+        background-color: $color-success;
+
+        @include e-m(delete) {
+            color: darken($color-success, 10%);
+
+            &:hover {
+                color: darken($color-success, 20%);
+            }
+        }
+    }
+
+    @include m(warning) {
+        color: $white;
+        background-color: $color-warning;
+
+        @include e-m(delete) {
+            color: darken($color-warning, 20%);
+
+            &:hover {
+                color: darken($color-warning, 30%);
+            }
+        }
+    }
+
+    @include m(danger) {
+        color: $white;
+        background-color: $color-danger;
+
+        @include e-m(delete) {
+            color: lighten($color-danger, 20%);
+        }
+    }
+
+    @include m(info) {
+        color: $white;
+        background-color: $color-info;
+
+        @include e-m(delete) {
+            color: lighten($color-info, 20%);
+        }
+    }
+
+    @include m(large) {
+        padding: $tag-large-padding;
+        border-radius: 20px;
+
+        @include e-m(delete) {
+            margin-right: -20px;
+        }
+    }
+
+    @include m(small) {
+        padding: $tag-small-padding;
+
+        @include e-m(delete) {
+            margin-right: -2px;
+        }
+    }
 }

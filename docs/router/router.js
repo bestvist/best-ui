@@ -92,6 +92,14 @@ const routes = [{
       import ('../views/Card.vue')
   },
   {
+    path: '/tag',
+    meta: {
+      title: 'Tag 标签'
+    },
+    component: () =>
+      import ('../views/Tag.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'
