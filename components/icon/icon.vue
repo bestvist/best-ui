@@ -1,8 +1,7 @@
 <template>
-    <i class="b-icon"
-        :class="className">
-        <slot></slot>
-    </i>
+    <svg class="b-icon" aria-hidden="true">
+        <use :xlink:href="iconName"></use>
+    </svg>
 </template>
 
 <script>
@@ -13,11 +12,8 @@ export default {
         name: String
     },
     computed: {
-        className() {
-            const icon = `b-icon-${this.name}`;
-            return {
-                [icon]: this.name
-            };
+        iconName() {
+            return `#icon-${this.name}`;
         }
     }
 };

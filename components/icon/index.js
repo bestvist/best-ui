@@ -1,3 +1,4 @@
+import './iconfont';
 import Icon from './icon.vue';
 
 Icon.install = function (Vue) {
