@@ -1,5 +1,5 @@
 # Best UI
-![Buildkite](https://img.shields.io/buildkite/3826789cf8890b426057e6fe1c4e683bdf04fa24d498885489/master.svg) ![MpmVersion](https://img.shields.io/npm/v/best-ui.svg) ![NpmDT](https://img.shields.io/npm/dt/best-ui.svg) ![NpmLicense](https://img.shields.io/badge/License-MIT-blue.svg) ![OpenSource](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) [![GitterChat](https://badges.gitter.im/best-ui/best-ui.svg)](https://gitter.im/best-ui/best-ui)
+![Buildkite](https://img.shields.io/buildkite/3826789cf8890b426057e6fe1c4e683bdf04fa24d498885489/master.svg) ![MpmVersion](https://img.shields.io/npm/v/best-ui.svg) ![NpmDT](https://img.shields.io/npm/dt/best-ui.svg) [![GitterChat](https://badges.gitter.im/best-ui/best-ui.svg)](https://gitter.im/best-ui/best-ui) ![NpmLicense](https://img.shields.io/badge/License-MIT-blue.svg)
 
 vue组件框架
 
