@@ -86,18 +86,5 @@ Vue.use(BestUI);
 ## Browser Support
 Modern browsers and Internet Explorer 10+.
 
-## Donation
-<div style="display:flex;align-items: center;">
-  <div>
-    <p></p>
-    <img sr="http://ox2ualtw3.bkt.clouddn.com/pay_wechat.png" />
-  </div>
-  <div>
-    <img src="http://ox2ualtw3.bkt.clouddn.com/pay_alipay.png" />
-  </div>
-</div>
-![Wechat](http://ox2ualtw3.bkt.clouddn.com/pay_wechat.png)
-![AliPay](http://ox2ualtw3.bkt.clouddn.com/pay_alipay.png)
-
 ## LICENSE
 MIT
