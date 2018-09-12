@@ -1,5 +1,27 @@
-# Best UI
-![Buildkite](https://img.shields.io/buildkite/3826789cf8890b426057e6fe1c4e683bdf04fa24d498885489/master.svg) ![MpmVersion](https://img.shields.io/npm/v/best-ui.svg) ![NpmDT](https://img.shields.io/npm/dt/best-ui.svg) [![GitterChat](https://badges.gitter.im/best-ui/best-ui.svg)](https://gitter.im/best-ui/best-ui) ![NpmLicense](https://img.shields.io/badge/License-MIT-blue.svg)
+<p align="center">
+  <a>
+    <img width="120" src="./docs/logo.svg">
+  </a>
+</p>
+<h1 align="center">Best-UI</h1>
+
+<p align="center">
+  <a href="https://www.travis-ci.org/bestvist/best-ui">
+    <img src="https://travis-ci.org/bestvist/best-ui.svg?branch=master" alt="travis ci badge">
+  </a>
+  <a href="https://npmjs.org/package/best-ui">
+    <img src="https://img.shields.io/npm/v/best-ui.svg" alt="npm version">
+  </a>
+  <a href="https://npmjs.org/package/best-ui">
+    <img src="https://img.shields.io/npm/dt/best-ui.svg" alt="downloads">
+  </a>
+  <a href="https://gitter.im/best-ui/best-ui">
+    <img src="https://badges.gitter.im/best-ui/best-ui.svg" alt="gitter">
+  </a>
+  <a>
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license MIT">
+  </a>
+</p>
 
 vue组件框架
 
