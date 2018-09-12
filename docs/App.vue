@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-layout class="container">
-      <b-header>Best UI</b-header>
+      <b-header><img height="30" src="./logo.svg" style="vertical-align:middle;"> Best UI</b-header>
       <b-layout horizontal>
         <b-slider id="nav" :width="'200px'">
           <b-list>
