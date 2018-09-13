@@ -63,6 +63,7 @@ Vue.use(BestUI);
 - [x] Card 卡片
 - Table 表格
 - [x] Tag 标签
+- [x] Alert 警告
 - Progress 进度条
 - Tree 树形
 - Pagination 分页
@@ -70,7 +71,6 @@ Vue.use(BestUI);
 - TextScroll 文字滚动
 - ZoomPicture 图片放大
 - Steps 步骤条
-- Alert 警告
 - Tooltip 提示
 - Popover 弹出框
 - Carousel 走马灯
