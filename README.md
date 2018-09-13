@@ -89,4 +89,6 @@ Modern browsers and Internet Explorer 10+.
 ## LICENSE
 MIT
 
-**[⬆ back to top](#links)**
+<p align="right">
+  <a href="#links"><strong>⬆ Top</strong></a>
+</p>
