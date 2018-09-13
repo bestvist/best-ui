@@ -1,0 +1,5 @@
+@include b(progress) {
+    height: 5px;
+    border-radius: $radius;
+    background-color: $bg;
+}

@@ -14,6 +14,7 @@ import Input from '../components/input';
 import Layout from '../components/layout';
 import List from '../components/list';
 import ListItem from '../components/list-item';
+import Progress from '../components/progress';
 import Radio from '../components/radio';
 import Row from '../components/row';
 import Slider from '../components/slider';
@@ -36,6 +37,7 @@ const components = [
     Layout,
     List,
     ListItem,
+    Progress,
     Radio,
     Row,
     Slider,
