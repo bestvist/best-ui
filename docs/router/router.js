@@ -100,6 +100,14 @@ const routes = [{
       import ('../views/Tag.vue')
   },
   {
+    path: '/alert',
+    meta: {
+      title: 'Alert 警告'
+    },
+    component: () =>
+      import ('../views/Alert.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'

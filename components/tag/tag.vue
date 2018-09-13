@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import bIcon from "../icon";
+import BIcon from "../icon";
 export default {
     name: "BTag",
     componentName: "BTag",
     components: {
-        bIcon
+        BIcon
     },
     props: {
         type: String,

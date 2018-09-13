@@ -1,5 +1,6 @@
 import './styles/index.scss';
 
+import Alert from '../components/alert';
 import Button from '../components/button';
 import Card from '../components/card';
 import CardContent from '../components/card-content';
@@ -21,6 +22,7 @@ import Tag from '../components/tag';
 import Transition from '../components/transition';
 
 const components = [
+    Alert,
     Button,
     Card,
     CardContent,
