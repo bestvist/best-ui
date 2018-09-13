@@ -1,3 +1,53 @@
 @include b(alert) {
-    padding: 20px 10px;
+    position: relative;
+    display: flex;
+    padding: $padding;
+    border-radius: $radius;
+
+    @include m(success) {
+        color: $color-success;
+        background-color: lighten($color-light-success, 30%);
+    }
+
+    @include m(warning) {
+        color: darken($color-warning, 20%);
+        background-color: lighten($color-light-warning, 20%);
+    }
+
+    @include m(danger) {
+        color: $color-danger;
+        background-color: lighten($color-light-danger, 10%);
+    }
+
+    @include m(info) {
+        color: $color-info;
+        background-color: lighten($color-light-info, 40%);
+    }
+
+    @include e-m(icon) {
+        flex-shrink: 0;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    @include e-m(title) {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    @include e-m(delete) {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @include when(center) {
+        justify-content: center;
+    }
 }
