@@ -88,3 +88,5 @@ Modern browsers and Internet Explorer 10+.
 
 ## LICENSE
 MIT
+
+**[⬆ back to top](#links)**
