@@ -100,6 +100,14 @@ const routes = [{
       import ('../views/Tag.vue')
   },
   {
+    path: '/progress',
+    meta: {
+      title: 'Progress 进度条'
+    },
+    component: () =>
+      import ('../views/Progress.vue')
+  },
+  {
     path: '/alert',
     meta: {
       title: 'Alert 警告'
