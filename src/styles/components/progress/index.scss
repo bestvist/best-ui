@@ -1,5 +1,43 @@
 @include b(progress) {
-    height: 5px;
     border-radius: $radius;
-    background-color: $bg;
+
+
+    @include b(progress-bar) {
+        display: inline-block;
+        width: 100%;
+        margin-right: -50px;
+        padding-right: 50px;
+        vertical-align: middle;
+
+        @include e-m(inner) {
+            height: 5px;
+            background-color: $bg;
+        }
+    }
+
+    @include e-m(text) {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+    // @include m(primary){
+    //     background-color: $color-primary;
+    // }
+
+    // @include m(success){
+    //     background-color: $color-success;
+    // }
+
+    // @include m(warning){
+    //     background-color: $color-warning;
+    // }
+
+    // @include m(danger){
+    //     background-color: $color-danger;
+    // }
+
+    // @include m(info){
+    //     background-color: $color-info;
+    // }
 }

@@ -16,4 +16,7 @@ export default {};
 </script>
 
 <style lang="scss">
+.b-progress + .b-progress{
+    margin-top: 20px;
+}
 </style>
