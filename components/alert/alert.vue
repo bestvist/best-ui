@@ -51,7 +51,6 @@ export default {
     methods: {
         handleDelete() {
             this.visible = false;
-            console.log(this.visible);
             this.$emit("delete");
         }
     }
