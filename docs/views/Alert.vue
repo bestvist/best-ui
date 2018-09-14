@@ -12,7 +12,7 @@
             <b-alert type="danger" icon center title="danger"></b-alert>
             <b-alert type="info" icon center title="info"></b-alert>
         </div>
-        <div class="panel">
+        <div class="panel" @click="handleClick">
             <b-alert type="success" icon deletable title="success">This is success alert,deletable.</b-alert>
             <b-alert type="warning" icon deletable title="warning">This is warning alert,deletable.</b-alert>
             <b-alert type="danger" icon deletable title="danger">This is danger alert,deletable.</b-alert>
@@ -20,6 +20,17 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        handleClick() {
+            console.log("alert");
+        }
+    }
+};
+</script>
+
 
 <style lang="scss">
 .b-alert {

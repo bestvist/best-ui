@@ -1,5 +1,5 @@
 <template>
-    <div v-show="visible" class="b-alert" :class="className">
+    <div v-show="visible" class="b-alert" :class="className" role="alert">
         <b-icon v-if="icon && iconName" :name="iconName" class="b-alert__icon"></b-icon>
         <div class="b-alert__content">
             <div v-if="title" class="b-alert__title">{{title}}</div>
@@ -50,6 +50,7 @@ export default {
     },
     methods: {
         handleDelete() {
+            console.log('ece')
             this.visible = false;
             this.$emit("delete");
         }
