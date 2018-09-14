@@ -64,7 +64,7 @@ Vue.use(BestUI);
 - Table 表格
 - [x] Tag 标签
 - [x] Alert 警告
-- Progress 进度条
+- [x] Progress 进度条
 - Tree 树形
 - Pagination 分页
 - [x] List 列表

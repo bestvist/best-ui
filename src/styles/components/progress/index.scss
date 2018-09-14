@@ -1,43 +1,66 @@
 @include b(progress) {
-    border-radius: $radius;
-
-
-    @include b(progress-bar) {
-        display: inline-block;
-        width: 100%;
-        margin-right: -50px;
-        padding-right: 50px;
-        vertical-align: middle;
-
-        @include e-m(inner) {
-            height: 5px;
-            background-color: $bg;
-        }
-    }
 
     @include e-m(text) {
         display: inline-block;
         margin-left: 10px;
         vertical-align: middle;
     }
+}
 
-    // @include m(primary){
-    //     background-color: $color-primary;
-    // }
+@include b(progress-bar) {
+    display: inline-block;
+    width: 100%;
+    margin-right: -50px;
+    padding-right: 50px;
+    vertical-align: middle;
 
-    // @include m(success){
-    //     background-color: $color-success;
-    // }
+    @include e-m(outer) {
+        position: relative;
+        height: 10px;
+        border-radius: $progress-radius;
+        overflow: hidden;
+        background-color: $bg;
+    }
 
-    // @include m(warning){
-    //     background-color: $color-warning;
-    // }
+    @include e-m(inner) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-radius: $progress-radius;
+        line-height: 1;
+        white-space: nowrap;
+        background-color: #409eff;
+        transition: width, background-color ease 0.3s 0s;
+    }
 
-    // @include m(danger){
-    //     background-color: $color-danger;
-    // }
+    @include m(primary) {
+        @include e-m(inner) {
+            background-color: $color-primary;
+        }
+    }
 
-    // @include m(info){
-    //     background-color: $color-info;
-    // }
+    @include m(success) {
+        @include e-m(inner) {
+            background-color: $color-success;
+        }
+    }
+
+    @include m(warning) {
+        @include e-m(inner) {
+            background-color: $color-warning;
+        }
+    }
+
+    @include m(danger) {
+        @include e-m(inner) {
+            background-color: $color-danger;
+        }
+    }
+
+    @include m(info) {
+        @include e-m(inner) {
+            background-color: $color-info;
+        }
+    }
 }
