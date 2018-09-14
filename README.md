@@ -90,5 +90,5 @@ Modern browsers and Internet Explorer 10+.
 MIT
 
 <p align="right">
-  <a href="#links"><strong>⬆ Top</strong></a>
+  <a href="#links"><strong style="#ff9800">⬆ Top</strong></a>
 </p>
