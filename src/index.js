@@ -6,6 +6,7 @@ import Card from '../components/card';
 import CardContent from '../components/card-content';
 import Checkbox from '../components/checkbox';
 import Col from '../components/col';
+import Collapse from '../components/collapse';
 import Content from '../components/content';
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -29,6 +30,7 @@ const components = [
     CardContent,
     Checkbox,
     Col,
+    Collapse,
     Content,
     Footer,
     Header,
