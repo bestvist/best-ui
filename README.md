@@ -74,7 +74,7 @@ Vue.use(BestUI);
 - Tooltip 提示
 - Popover 弹出框
 - Carousel 走马灯
-- Collapse 折叠板
+- [x] Collapse 折叠板
 - Timeline 时间轴
 
 ### 服务组件

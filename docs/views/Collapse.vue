@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="panel">
-            <b-collapse :title="'b-collapse'" :show="true">
+            <b-collapse :title="'b-collapse'" v-model="visible">
                 <div>
                     <ul>
                         <li>collapse1</li>
@@ -14,6 +14,16 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return {
+            visible: true
+        }
+    }
+}
+</script>
+
 
 <style lang="scss">
 .b-collapse + .b-collapse {

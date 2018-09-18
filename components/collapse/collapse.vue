@@ -18,12 +18,20 @@ export default {
     components: { BCollapseTransition },
     props: {
         title: String,
-        show: Boolean
+        open: Boolean
+    },
+    data(){
+        return {
+            show:false
+        }
     },
     methods: {
         handleClick() {
             this.show = !this.show;
         }
+    },
+    created(){
+        this.show = this.open;
     }
 };
 </script>
