@@ -116,6 +116,14 @@ const routes = [{
       import ('../views/Alert.vue')
   },
   {
+    path: '/collapse',
+    meta: {
+      title: 'Collapse 折叠板'
+    },
+    component: () =>
+      import ('../views/Collapse.vue')
+  },
+  {
     path: '/list',
     meta: {
       title: 'List 列表'
