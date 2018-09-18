@@ -1,4 +1,22 @@
 @include b(collapse) {
+    position: relative;
+    padding: $padding;
     border: $border;
     border-radius: $radius;
+
+    @include e-m(title) {
+        padding-right: 15px;
+        cursor: pointer;
+    }
+
+    @include e-m(icon) {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: transform ease 0.3s 0s;
+
+        &.active {
+            transform: rotatez(90deg);
+        }
+    }
 }

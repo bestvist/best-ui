@@ -1,7 +1,16 @@
 <template>
     <div>
         <div class="panel">
-            <b-collapse :title="b-collapse"></b-collapse>
+            <b-collapse :title="'b-collapse'" :show="true">
+                <div>
+                    <ul>
+                        <li>collapse1</li>
+                        <li>collapse2</li>
+                        <li>collapse3</li>
+                        <li>collapse4</li>
+                    </ul>
+                </div>
+            </b-collapse>
         </div>
     </div>
 </template>
