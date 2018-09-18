@@ -50,7 +50,6 @@ export default {
     },
     methods: {
         handleDelete() {
-            console.log('ece')
             this.visible = false;
             this.$emit("delete");
         }
