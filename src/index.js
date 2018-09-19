@@ -21,6 +21,7 @@ import Row from '../components/row';
 import Slider from '../components/slider';
 import Switch from '../components/switch';
 import Tag from '../components/tag';
+import Time from '../components/time';
 import Transition from '../components/transition';
 
 const components = [
@@ -45,6 +46,7 @@ const components = [
     Slider,
     Switch,
     Tag,
+    Time,
     Transition,
 ]
 
