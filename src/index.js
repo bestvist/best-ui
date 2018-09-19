@@ -22,6 +22,8 @@ import Slider from '../components/slider';
 import Switch from '../components/switch';
 import Tag from '../components/tag';
 import Time from '../components/time';
+import Timeline from '../components/timeline';
+import TimelineItem from '../components/timeline-item';
 import Transition from '../components/transition';
 
 const components = [
@@ -47,6 +49,8 @@ const components = [
     Switch,
     Tag,
     Time,
+    Timeline,
+    TimelineItem,
     Transition,
 ]
 
