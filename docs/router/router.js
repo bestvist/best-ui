@@ -84,6 +84,14 @@ const routes = [{
       import ('../views/Switch.vue')
   },
   {
+    path: '/time',
+    meta: {
+      title: 'Time 相对时间'
+    },
+    component: () =>
+      import ('../views/Time.vue')
+  },
+  {
     path: '/card',
     meta: {
       title: 'Card 卡片'
