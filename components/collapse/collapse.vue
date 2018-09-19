@@ -11,28 +11,29 @@
 </template>
 
 <script>
+import BIcon from "../icon";
 import BCollapseTransition from "../transition";
 export default {
-    name: "BCollapse",
-    componentName: "BCollapse",
-    components: { BCollapseTransition },
-    props: {
-        title: String,
-        open: Boolean
-    },
-    data(){
-        return {
-            show:false
-        }
-    },
-    methods: {
-        handleClick() {
-            this.show = !this.show;
-        }
-    },
-    created(){
-        this.show = this.open;
+  name: "BCollapse",
+  componentName: "BCollapse",
+  components: { BCollapseTransition, BIcon },
+  props: {
+    title: String,
+    open: Boolean
+  },
+  data() {
+    return {
+      show: false
+    };
+  },
+  methods: {
+    handleClick() {
+      this.show = !this.show;
     }
+  },
+  created() {
+    this.show = this.open;
+  }
 };
 </script>
 
