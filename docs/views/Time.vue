@@ -12,6 +12,11 @@ export default {
     return {
       time1: (new Date().getTime())
     };
+  },
+  mounted(){
+      setTimeout(()=>{
+          this.time1 = (new Date().getTime()-3*1000);
+      },2000)
   }
 };
 </script>
