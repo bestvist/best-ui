@@ -7,3 +7,20 @@
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
 }
+
+.b-slide-enter-active,
+.b-slide-leave-active {
+    transition: all .2s linear 0s;
+}
+
+.b-slide-enter {
+    transform: translateX(100%);
+}
+
+.b-slide-enter-to {
+    transform: translateX(0%);
+}
+
+.b-slide-leave-to {
+    transform: translateX(-100%);
+}
