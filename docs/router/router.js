@@ -147,7 +147,14 @@ const routes = [{
     component: () =>
       import ('../views/List.vue')
   },
-
+  {
+    path: '/carousel',
+    meta: {
+      title: 'Carousel 走马灯'
+    },
+    component: () =>
+      import ('../views/Carousel.vue')
+  },
 ]
 
 export default new Router({
