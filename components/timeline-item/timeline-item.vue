@@ -1,14 +1,16 @@
 <template>
     <li class="b-timeline-item">
-        <slot></slot>
+        <div class="b-timeline-item__line"></div>
+        <div class="b-timeline-item__content">
+            <slot></slot>
+        </div>
     </li>
 </template>
 
 <script>
 export default {
     name: "BTimelineItem",
-    componentName: "BTimelineItem",
-    
+    componentName: "BTimelineItem"
 };
 </script>
 

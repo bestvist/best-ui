@@ -1,0 +1,26 @@
+@include b(timeline) {}
+
+@include b(timeline-item) {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: $padding;
+
+    @include e-m(icon) {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: 1px solid $color-primary;
+        background-color: #fff;
+    }
+
+    @include e-m(line) {
+        position: absolute;
+        left: 6px;
+        top: 0;
+        height: 100%;
+        border-left: $border;
+    }
+
+    @include e-m(content) {}
+}
