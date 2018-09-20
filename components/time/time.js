@@ -3,6 +3,9 @@
  * @param {Number} currentTime 当前时间时间戳
  * @returns {Boolean} 传入的时间戳是否早于当前时间戳
  */
+/**
+ * 
+ */
 const isEarly = (timeStamp, currentTime) => {
     return timeStamp <= currentTime;
 };
@@ -12,7 +15,7 @@ const isEarly = (timeStamp, currentTime) => {
  * @returns {String} 处理后的字符串
  * @description 如果传入的数值小于10，即位数只有1位，则在前面补充0
  */
-const getHandledValue = num => {
+const fillZero = num => {
     return num < 10 ? '0' + num : num;
 };
 
@@ -23,11 +26,11 @@ const getHandledValue = num => {
 const getDate = (timeStamp, startType) => {
     const d = new Date(timeStamp * 1000);
     const year = d.getFullYear();
-    const month = getHandledValue(d.getMonth() + 1);
-    const date = getHandledValue(d.getDate());
-    const hours = getHandledValue(d.getHours());
-    const minutes = getHandledValue(d.getMinutes());
-    const second = getHandledValue(d.getSeconds());
+    const month = fillZero(d.getMonth() + 1);
+    const date = fillZero(d.getDate());
+    const hours = fillZero(d.getHours());
+    const minutes = fillZero(d.getMinutes());
+    const second = fillZero(d.getSeconds());
     let resStr = '';
     if (startType === 'year') resStr = year + '-' + month + '-' + date + ' ' + hours + ':' + minutes + ':' + second;
     else resStr = month + '-' + date + ' ' + hours + ':' + minutes;
