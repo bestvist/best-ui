@@ -75,7 +75,6 @@ Vue.use(BestUI);
 - Tooltip 提示
 - Popover 弹出框
 - Carousel 走马灯
-- Tree 树形
 - Pagination 分页
 
 
