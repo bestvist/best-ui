@@ -92,6 +92,14 @@ const routes = [{
       import ('../views/Time.vue')
   },
   {
+    path: '/timeline',
+    meta: {
+      title: 'Timeline 时间轴'
+    },
+    component: () =>
+      import ('../views/Timeline.vue')
+  },
+  {
     path: '/card',
     meta: {
       title: 'Card 卡片'

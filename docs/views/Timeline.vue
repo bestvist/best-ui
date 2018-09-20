@@ -1,0 +1,20 @@
+<template>
+    <div>
+        <div class="panel">
+            <b-timelie>
+                <b-timeline-item>
+                    <h3>2016</h3>
+                    <p>first</p>
+                </b-timeline-item>
+                <b-timeline-item>
+                    <h3>2017</h3>
+                    <p>second</p>
+                </b-timeline-item>
+                <b-timeline-item>
+                    <h3>2018</h3>
+                    <p>third</p>
+                </b-timeline-item>
+            </b-timelie>
+        </div>
+    </div>
+</template>
