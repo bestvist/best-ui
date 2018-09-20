@@ -17,11 +17,12 @@
 
     @include e-m(line) {
         position: absolute;
-        left: 6px;
+        left: 7px;
         top: 0;
         width: 1px;
         height: 100%;
         background-color: $border-color;
+        animation: animate-timeline-line ease .3s 0s;
     }
 
     &:last-child .b-timeline-item__line {
@@ -29,4 +30,14 @@
     }
 
     @include e-m(content) {}
+}
+
+@keyframes animate-timeline-line {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
 }

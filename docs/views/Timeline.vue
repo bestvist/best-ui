@@ -2,15 +2,15 @@
     <div>
         <div class="panel">
             <b-timeline>
-                <b-timeline-item>
+                <b-timeline-item :animation="false">
                     <h3>2016</h3>
                     <p>first</p>
                 </b-timeline-item>
-                <b-timeline-item>
+                <b-timeline-item :animation="false">
                     <h3>2017</h3>
                     <p>second</p>
                 </b-timeline-item>
-                <b-timeline-item>
+                <b-timeline-item :animation="false">
                     <h3>2018</h3>
                     <p>third</p>
                 </b-timeline-item>
