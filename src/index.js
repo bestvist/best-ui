@@ -4,6 +4,8 @@ import Alert from '../components/alert';
 import Button from '../components/button';
 import Card from '../components/card';
 import CardContent from '../components/card-content';
+import Carousel from '../components/carousel';
+import CarouselItem from '../components/carousel-item';
 import Checkbox from '../components/checkbox';
 import Col from '../components/col';
 import Collapse from '../components/collapse';
@@ -31,6 +33,8 @@ const components = [
     Button,
     Card,
     CardContent,
+    Carousel,
+    CarouselItem,
     Checkbox,
     Col,
     Collapse,

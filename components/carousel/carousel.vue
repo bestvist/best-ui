@@ -11,6 +11,7 @@ export default {
     componentName: "BCarousel",
     components: { BIcon },
     props: {
+        height: String,
         loop: {
             type: Boolean,
             default: true
@@ -18,6 +19,10 @@ export default {
         interval: {
             type: Number,
             default: 5000
+        },
+        index: {
+            type: Number,
+            default: 0
         }
     }
 };
