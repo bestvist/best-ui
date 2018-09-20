@@ -55,6 +55,7 @@ Vue.use(BestUI);
 - [x] Radio 单选框
 - [x] Switch 开关
 - [x] Time 相对时间
+- [x] Timeline 时间轴
 - [x] Card 卡片
 - [x] Tag 标签
 - [x] Alert 警告
@@ -74,7 +75,6 @@ Vue.use(BestUI);
 - Tooltip 提示
 - Popover 弹出框
 - Carousel 走马灯
-- Timeline 时间轴
 - Tree 树形
 - Pagination 分页
 
