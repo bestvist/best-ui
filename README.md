@@ -1,6 +1,6 @@
 <p align="center">
   <a>
-    <img width="120" src="./docs/logo.svg">
+    <img width="120" src="./logo.svg">
   </a>
 </p>
 <h1 align="center">Best UI</h1>
