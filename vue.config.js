@@ -1,8 +1,8 @@
 const path = require('path')
 const args = process.argv.splice(1);
 
-let baseUrl = args.indexOf('build') !== -1 && args.indexOf('--target') === -1 ? '/best-ui/docs-dist/' : '/';
-let output = args.indexOf('build') !== -1 && args.indexOf('--target') === -1 ? 'docs-dist' : 'dist';
+let baseUrl = args.indexOf('build') !== -1 && args.indexOf('--target') === -1 ? '/best-ui/docs/' : '/';
+let output = args.indexOf('build') !== -1 && args.indexOf('--target') === -1 ? 'docs' : 'dist';
 
 module.exports = {
     baseUrl: baseUrl,
@@ -10,7 +10,7 @@ module.exports = {
     filenameHashing: false,
     pages: {
         index: {
-            entry: 'docs/main.js',
+            entry: 'docs-src/main.js',
         }
     },
 }

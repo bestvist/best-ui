@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["b441"],{b441:function(e,t,n){"use strict";n.r(t);var i=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("div",{staticClass:"panel"},[n("b-time",{attrs:{time:e.time1}})],1)])},a=[],u={data:function(){return{time1:(new Date).getTime()}},mounted:function(){var e=this;setTimeout(function(){e.time1=(new Date).getTime()-3e3},2e3)}},s=u,o=n("2877"),c=Object(o["a"])(s,i,a,!1,null,null,null);c.options.__file="Time.vue";t["default"]=c.exports}}]);
+//# sourceMappingURL=b441.js.map

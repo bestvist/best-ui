@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["6374"],{6374:function(t,n,e){"use strict";e.r(n);var a=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("div",[e("div",{staticClass:"panel"},[e("b-card",{attrs:{title:"Card Title"}},[e("b-card-content",[t._v("\n                this is card content.\n            ")])],1)],1)])},i=[],s=e("2877"),c={},l=Object(s["a"])(c,a,i,!1,null,null,null);l.options.__file="Card.vue";n["default"]=l.exports}}]);
+//# sourceMappingURL=6374.js.map
