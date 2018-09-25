@@ -2,35 +2,35 @@
     <div>
         <!-- type -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button1" :key="index" :type="item.type">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button1" :key="index" :type="item.type">{{item.label}}</b-btn>
         </div>
         <!-- link -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button2" :key="index" :href="item.link">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button2" :key="index" :href="item.link">{{item.label}}</b-btn>
         </div>
         <!-- size -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button3" :key="index" :size="item.size">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button3" :key="index" :size="item.size">{{item.label}}</b-btn>
         </div>
         <!-- round -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button1" :key="index" round :type="item.type">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button1" :key="index" round :type="item.type">{{item.label}}</b-btn>
         </div>
         <!-- circle -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button3" :key="index" circle :size="item.size">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button3" :key="index" circle :size="item.size">{{item.label}}</b-btn>
         </div>
         <!-- flat -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button1" :key="index" flat :type="item.type">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button1" :key="index" flat :type="item.type">{{item.label}}</b-btn>
         </div>
         <!-- full -->
         <div class="panel">
-            <b-button class="docs-button" full>full</b-button>
+            <b-btn class="docs-button" full>full</b-btn>
         </div>
         <!-- disabled -->
         <div class="panel">
-            <b-button class="docs-button" v-for="(item,index) in button1" :key="index" disabled :type="item.type">{{item.label}}</b-button>
+            <b-btn class="docs-button" v-for="(item,index) in button1" :key="index" disabled :type="item.type">{{item.label}}</b-btn>
         </div>
     </div>
 </template>

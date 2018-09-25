@@ -41,6 +41,7 @@ Helvetica,
 Arial,
 sans-serif;
 $font-size: 14px;
+$font-size-big: 20px;
 $line-height: 40px;
 $padding: 10px;
 $border-color: #cecece;
@@ -108,7 +109,7 @@ $switch-shadow: 1px 1px 3px rgba(0, 0, 0, .1);
 /*
 * card
 */
-$card-padding: 20px;
+$card-padding: $font-size-big;
 $card-header-size: 20px;
 /*
 * tag

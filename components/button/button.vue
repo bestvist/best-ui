@@ -1,7 +1,7 @@
 <script>
 export default {
-    name: "BButton",
-    componentName: "BButton",
+    name: "BBtn",
+    componentName: "BBtn",
     props: {
         color: String,
         textColor: String,

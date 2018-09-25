@@ -1,0 +1,19 @@
+@include b(popover) {
+    display: inline-block;
+
+    @include e-m(ref) {
+        display: inline-block;
+    }
+
+    @include e-m(popper) {
+        min-width: 100px;
+        padding: $padding;
+        border-radius: $radius;
+        box-shadow: $shadow-deep-y;
+        background-color: $white;
+    }
+
+    @include e-m(title){
+        font-size: $font-size-big;
+    }
+}

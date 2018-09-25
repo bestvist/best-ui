@@ -1,18 +1,23 @@
 <template>
-    <div class="b-popover">
-        <button ref="reference" @click="handleClick">button</button>
-        <div ref="popper" v-show="visible" placement="top">
-            <ul>
-                <li>111</li>
-                <li>222</li>
-                <li>333</li>
-            </ul>
+    <span class="b-popover">
+        <div class="b-popover__ref" ref="reference" @click="handleClick">
+            <slot></slot>
         </div>
-    </div>
+        <transition name="b-fade">
+            <div class="b-popover__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible">
+                <div class="b-popover__title" v-if="$slots.title||title">
+                    <slot class="b-popover__title" name="title" v-if="$slots.title"></slot>
+                    <template v-if="!$slots.title&&title">{{title}}</template>
+                </div>
+                <slot name="content"></slot>
+            </div>
+        </transition>
+    </span>
 </template>
 
 <script>
 import Popper from "../../src/utils/popper";
+import { on, off } from "../../src/utils/dom";
 export default {
     name: "BPopover",
     componentName: "BPopover",
@@ -22,23 +27,61 @@ export default {
             type: String,
             default: "click"
         },
+        popClass: String,
+        arrow: Boolean,
         title: String,
         content: String,
-        placement: String,
-        offset: Number,
-        width: [String, Number],
-        popperClass: String,
-        options: Object
+        placement: {
+            type: String,
+            default: "bottom"
+        },
+        width: [String, Number]
     },
     data() {
         return {
             visible: false
         };
     },
+    computed: {
+        popperClass() {
+            return {
+                [`${this.popClass}`]: !!this.popClass
+            };
+        }
+    },
     methods: {
         handleClick() {
             this.visible = !this.visible;
+        },
+        handleDocumentClick(e) {
+            let reference = this.reference || this.$refs.reference;
+            const popper = this.popper || this.$refs.popper;
+            if (
+                !reference &&
+                this.$slots.reference &&
+                this.$slots.reference[0]
+            ) {
+                reference = this.referenceElm = this.$slots.reference[0].elm;
+            }
+            if (
+                !this.$el ||
+                !reference ||
+                this.$el.contains(e.target) ||
+                reference.contains(e.target) ||
+                !popper ||
+                popper.contains(e.target)
+            )
+                return;
+            this.visible = false;
         }
+    },
+    mounted() {
+        if (this.trigger === "click") {
+            on(document, "click", this.handleDocumentClick);
+        }
+    },
+    destroyed() {
+        off(document, "click", this.handleDocumentClick);
     }
 };
 </script>

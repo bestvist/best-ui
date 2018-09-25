@@ -58,9 +58,9 @@ export default {
             if (val) {
                 if (this.handleIndexIncrease) this.handleIndexIncrease();
                 this.updatePopper();
-                this.$emit('on-popper-show');
+                this.$emit('open');
             } else {
-                this.$emit('on-popper-hide');
+                this.$emit('hide');
             }
             this.$emit('input', val);
         }
@@ -71,17 +71,17 @@ export default {
             if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.placement)) {
                 return;
             }
-
+            
             const options = this.options;
             const popper = this.popper || this.$refs.popper;
             const reference = this.reference || this.$refs.reference;
-
+            
             if (!popper || !reference) return;
 
             if (this.popperJS && this.popperJS.hasOwnProperty('destroy')) {
                 this.popperJS.destroy();
             }
-
+            
             options.placement = this.placement;
 
             if (!options.modifiers.offset) {
@@ -92,9 +92,9 @@ export default {
                 this.$nextTick(this.updatePopper);
                 this.$emit('created', this);
             };
-
+            
             this.popperJS = new Popper(reference, popper, options);
-
+            
         },
         updatePopper() {
             if (isServer) return;
@@ -109,7 +109,6 @@ export default {
     },
     updated (){
         this.$nextTick(()=>this.updatePopper());
-
     },
     beforeDestroy() {
         if (isServer) return;
