@@ -163,6 +163,14 @@ const routes = [{
     component: () =>
       import ('../views/Carousel.vue')
   },
+  {
+    path: '/popover',
+    meta: {
+      title: 'Popover 弹出框'
+    },
+    component: () =>
+      import ('../views/Popover.vue')
+  },
 ]
 
 export default new Router({

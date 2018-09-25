@@ -1,7 +1,7 @@
 <template>
     <div class="b-popover">
-        <button ref="reference">button</button>
-        <div ref="popper" v-if="visible">
+        <button ref="reference" @click="handleClick">button</button>
+        <div ref="popper" v-show="visible" placement="top">
             <ul>
                 <li>111</li>
                 <li>222</li>
