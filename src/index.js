@@ -17,9 +17,11 @@ import Input from '../components/input';
 import Layout from '../components/layout';
 import List from '../components/list';
 import ListItem from '../components/list-item';
+import Popover from '../components/popover';
 import Progress from '../components/progress';
 import Radio from '../components/radio';
 import Row from '../components/row';
+import Select from '../components/select';
 import Slider from '../components/slider';
 import Switch from '../components/switch';
 import Tag from '../components/tag';
@@ -46,9 +48,11 @@ const components = [
     Layout,
     List,
     ListItem,
+    Popover,
     Progress,
     Radio,
     Row,
+    Select,
     Slider,
     Switch,
     Tag,
