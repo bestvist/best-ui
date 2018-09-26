@@ -42,8 +42,10 @@
 @mixin e-m($modifier) {
     $currentSelector: #{'.'+ $B + '__' + $modifier};
 
-    #{$currentSelector} {
-        @content;
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
     }
 }
 
