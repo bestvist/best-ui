@@ -63,6 +63,7 @@ Vue.use(BestUI);
 - [x] List 列表
 - [x] Collapse 折叠板
 - [x] Popover 弹出框
+- [x] Tip 提示
 
 
 ## TODO
@@ -73,7 +74,6 @@ Vue.use(BestUI);
 - TextScroll 文字滚动
 - ZoomPicture 图片放大
 - Steps 步骤条
-- Tooltip 提示
 - Carousel 走马灯
 - Pagination 分页
 
