@@ -1,15 +1,16 @@
 <template>
     <span class="b-popover">
-        <div class="b-popover__ref" ref="reference" @click="handleClick">
+        <div class="b-popover__ref" ref="reference" @click="handleClick" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
             <slot></slot>
         </div>
         <transition name="b-fade">
-            <div class="b-popover__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible">
+            <div class="b-popover__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible"  @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
                 <div class="b-popover__title" v-if="$slots.title||title">
                     <slot class="b-popover__title" name="title" v-if="$slots.title"></slot>
                     <template v-if="!$slots.title&&title">{{title}}</template>
                 </div>
                 <slot name="content"></slot>
+
             </div>
         </transition>
     </span>
@@ -28,7 +29,6 @@ export default {
             default: "click"
         },
         popClass: String,
-        arrow: Boolean,
         title: String,
         content: String,
         placement: {
@@ -51,7 +51,9 @@ export default {
     },
     methods: {
         handleClick() {
-            this.visible = !this.visible;
+            if (this.trigger === "click") {
+                this.visible = !this.visible;
+            }
         },
         handleDocumentClick(e) {
             let reference = this.reference || this.$refs.reference;
@@ -73,6 +75,20 @@ export default {
             )
                 return;
             this.visible = false;
+        },
+        handleMouseEnter() {
+            if (this.trigger === "hover") {
+                clearTimeout(this._timer);
+                this.visible = true;
+            }
+        },
+        handleMouseLeave() {
+            if (this.trigger === "hover") {
+                clearTimeout(this._timer);
+                this._timer = setTimeout(() => {
+                    this.visible = false;
+                }, 200);
+            }
         }
     },
     mounted() {

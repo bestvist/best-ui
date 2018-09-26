@@ -62,6 +62,7 @@ Vue.use(BestUI);
 - [x] Progress 进度条
 - [x] List 列表
 - [x] Collapse 折叠板
+- [x] Popover 弹出框
 
 
 ## TODO
@@ -73,7 +74,6 @@ Vue.use(BestUI);
 - ZoomPicture 图片放大
 - Steps 步骤条
 - Tooltip 提示
-- Popover 弹出框
 - Carousel 走马灯
 - Pagination 分页
 
