@@ -4,7 +4,7 @@
             <slot></slot>
         </div>
         <transition name="b-fade">
-            <div class="b-tooltip__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
+            <div class="b-tooltip__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" role="tooltip" aria-hidden="true">
                 <slot name="content" v-if="$slots.content"></slot>
                 <template v-if="!$slots.content&&content">{{content}}</template>
             </div>
@@ -45,7 +45,7 @@ export default {
         handleMouseEnter() {
             clearTimeout(this._timer);
             this.visible = true;
-            console.log(this.visible);
+            document.body.appendChild(this.$refs['popper']);
         },
         handleMouseLeave() {
             clearTimeout(this._timer);
@@ -53,6 +53,9 @@ export default {
                 this.visible = false;
             }, 200);
         }
+    },
+    mounted() {
+        
     }
 };
 </script>

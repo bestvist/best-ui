@@ -4,7 +4,7 @@
             <slot></slot>
         </div>
         <transition name="b-fade">
-            <div class="b-popover__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible"  @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
+            <div class="b-popover__popper" :class="popperClass" :style="{width: width}" ref="popper" v-show="visible"  @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" aria-hidden="true">
                 <div class="b-popover__title" v-if="$slots.title||title">
                     <slot class="b-popover__title" name="title" v-if="$slots.title"></slot>
                     <template v-if="!$slots.title&&title">{{title}}</template>
