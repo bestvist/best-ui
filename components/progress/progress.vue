@@ -16,7 +16,7 @@ export default {
     props: {
         type: String,
         percent: Number,
-        strokeWidth: Number
+        strokeWidth: [Number,String]
     },
     computed: {
         percentText() {

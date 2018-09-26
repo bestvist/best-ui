@@ -12,14 +12,6 @@ const routes = [{
     component: Home
   },
   {
-    path: '/home',
-    meta: {
-      title: 'Home 主页'
-    },
-    component: () =>
-      r => require.ensure([], () => r(require('../mds/home.md')))
-  },
-  {
     path: '/layout',
     meta: {
       title: 'Layout 布局'

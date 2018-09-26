@@ -54,6 +54,7 @@
         MIT
       </code>
     </pre>
+
   </div>
 </template>
 

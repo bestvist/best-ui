@@ -1,6 +1,7 @@
 @include b(carousel) {
     position: relative;
     height: 400px;
+    overflow: hidden;
 }
 
 @include b(carousel-item) {
