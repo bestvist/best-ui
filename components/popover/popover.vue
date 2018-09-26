@@ -10,7 +10,6 @@
                     <template v-if="!$slots.title&&title">{{title}}</template>
                 </div>
                 <slot name="content"></slot>
-
             </div>
         </transition>
     </span>

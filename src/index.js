@@ -28,6 +28,7 @@ import Tag from '../components/tag';
 import Time from '../components/time';
 import Timeline from '../components/timeline';
 import TimelineItem from '../components/timeline-item';
+import Tooltip from '../components/tooltip';
 import Transition from '../components/transition';
 
 const components = [
@@ -59,6 +60,7 @@ const components = [
     Time,
     Timeline,
     TimelineItem,
+    Tooltip,
     Transition,
 ]
 

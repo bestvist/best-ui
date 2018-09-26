@@ -171,6 +171,14 @@ const routes = [{
     component: () =>
       import ('../views/Popover.vue')
   },
+  {
+    path: '/Tip',
+    meta: {
+      title: 'Tip 提示'
+    },
+    component: () =>
+      import ('../views/Tooltip.vue')
+  },
 ]
 
 export default new Router({

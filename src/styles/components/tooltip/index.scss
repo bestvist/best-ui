@@ -1,4 +1,4 @@
-@include b(popover) {
+@include b(tooltip) {
     display: inline-block;
 
     @include e-m(ref) {
@@ -9,8 +9,11 @@
         min-width: 100px;
         padding: $padding;
         border-radius: $radius;
+        font-size: 12px;
+        line-height: 1.2;
+        color: $white;
+        background-color: $color-primary;
         box-shadow: $shadow-xy;
-        background-color: $white;
         z-index: $zIndex;
 
         &[x-placement="bottom"] {
@@ -28,9 +31,10 @@
         &[x-placement="right"] {
             margin-left: 5px;
         }
-    }
 
-    @include e-m(title) {
-        font-size: $font-size-big;
+        @include when(light) {
+            color: $color-text-primary;
+            background-color: $white;
+        }
     }
 }
