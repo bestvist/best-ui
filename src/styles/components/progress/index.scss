@@ -34,32 +34,34 @@
         transition: width, background-color ease 0.3s 0s;
     }
 
+    $progress-inner: '.b-progress-bar__inner';
+
     @include m(primary) {
-        @include e-m(inner) {
+        #{$progress-inner} {
             background-color: $color-primary;
         }
     }
 
     @include m(success) {
-        @include e-m(inner) {
+        #{$progress-inner} {
             background-color: $color-success;
         }
     }
 
     @include m(warning) {
-        @include e-m(inner) {
+        #{$progress-inner} {
             background-color: $color-warning;
         }
     }
 
     @include m(danger) {
-        @include e-m(inner) {
+        #{$progress-inner} {
             background-color: $color-danger;
         }
     }
 
     @include m(info) {
-        @include e-m(inner) {
+        #{$progress-inner} {
             background-color: $color-info;
         }
     }
