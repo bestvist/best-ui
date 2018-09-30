@@ -45,7 +45,7 @@ import 'best-ui/dist/bestui.css';
 Vue.use(BestUI);
 ```
 
-### 基础
+## 基础
 - [x] Layout 布局
 - [x] Color 色彩
 - [x] Icon 图标
@@ -78,7 +78,7 @@ Vue.use(BestUI);
 - Pagination 分页
 
 
-### 服务组件
+## 服务组件
 - Loading 加载
 - Message 消息
 - Notification 通知

@@ -4,8 +4,8 @@ let baseUrl = args.indexOf('build') !== -1 && args.indexOf('--target') === -1 ? 
 let output = args.indexOf('build') !== -1 && args.indexOf('--target') === -1 ? 'docs' : 'dist';
 
 module.exports = {
-    baseUrl: baseUrl,
-    outputDir: output,
+    baseUrl: '/',
+    outputDir: 'dist',
     filenameHashing: false,
     pages: {
         index: {

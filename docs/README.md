@@ -10,5 +10,12 @@ features:
   details: 享用 Vue + webpack 开发环境，在 markdown 中使用 Vue 组件，并通过 Vue 开发自定义主题。
 - title: 性能高效
   details: VuePress 将每个页面生成为预渲染的静态 HTML，每个页面加载之后，然后作为单页面应用程序(SPA)运行。
-footer: MIT Licensed | Copyright © 2018-bestvist
 ---
+
+> UI library for Vuejs
+
+## Links
+
+* [Documentation](https://bestvist.github.io/best-ui/docs-dist/)
+* [Gitter](https://gitter.im/best-ui/best-ui)
+* [Issues](https://github.com/bestvist/best-ui/issues)
