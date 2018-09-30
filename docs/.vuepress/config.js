@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/best-ui',
+    base: '/best-ui/',
     title: 'Best UI',
     description: 'UI library for Vuejs',
     head:[
