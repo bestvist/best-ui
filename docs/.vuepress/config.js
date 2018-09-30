@@ -30,6 +30,25 @@ module.exports = {
                     children: [
                         '/guide/component/',
                         '/guide/component/layout',
+                        '/guide/component/grid',
+                        '/guide/component/color',
+                        '/guide/component/icon',
+                        '/guide/component/button',
+                        '/guide/component/input',
+                        '/guide/component/checkbox',
+                        '/guide/component/radio',
+                        '/guide/component/switch',
+                        '/guide/component/time',
+                        '/guide/component/timeline',
+                        '/guide/component/card',
+                        '/guide/component/tag',
+                        '/guide/component/progress',
+                        '/guide/component/alert',
+                        '/guide/component/collapse',
+                        '/guide/component/list',
+                        '/guide/component/carousel',
+                        '/guide/component/popover',
+                        '/guide/component/tip',
                     ]
                 }
             ]

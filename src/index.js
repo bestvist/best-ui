@@ -75,7 +75,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 const b = {
-    version: process.env.VERSION,
     install,
     ...components,
 }
