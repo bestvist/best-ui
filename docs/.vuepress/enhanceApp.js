@@ -1,4 +1,5 @@
 import BestUI from '../../src/index';
+
 export default ({
     Vue,
     options,

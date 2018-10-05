@@ -38,20 +38,8 @@
 </b-layout>
 ```
 
-## Props
+## 属性
 
 |参数|说明|类型|可选值|默认值|
 |-|-|-|-|-|
-
-
-
-<style lang="scss">
-.docs-layout-content {
-    height: 300px;
-    background: rgb(247, 230, 186);
-}
-
-.docs-layout-slider {
-    background: rgb(172, 199, 240);
-}
-</style>
+|horizontal|子元素的排列方向|Boolean|true/false|false|
