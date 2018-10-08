@@ -1,6 +1,6 @@
 {
   "name": "best-ui",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "keywords": [
     "vue",
     "ui",
@@ -23,11 +23,9 @@
     "start": "vue-cli-service serve",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "build": "vue-cli-service build --target lib --name bestui src/index.js",
-    "build:docs": "vue-cli-service build --name bestui docs/main.js",
     "deploy": "bash deploy.sh",
-    "lint": "vue-cli-service lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vue-cli-service build --target lib --name bestui src/index.js",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
