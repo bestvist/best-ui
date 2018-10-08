@@ -42,4 +42,4 @@
 
 |参数|说明|类型|可选值|默认值|
 |-|-|-|-|-|
-|horizontal|子元素的排列方向|Boolean|true/false|false|
+|horizontal|子元素的排列方向|Boolean|-|false|

@@ -34,8 +34,10 @@
     "url": "https://github.com/bestvist/best-ui.git"
   },
   "dependencies": {
+    "highlight.js": "^9.12.0",
     "popper.js": "^1.14.4",
     "vue": "^2.5.17",
+    "vue-highlight.js": "^2.2.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -48,6 +50,6 @@
     "style-resources-loader": "^1.2.1",
     "url-loader": "^1.1.1",
     "vue-template-compiler": "^2.5.17",
-    "vuepress": "^0.14.4"
+    "vuepress": "^1.0.0-alpha.8"
   }
 }

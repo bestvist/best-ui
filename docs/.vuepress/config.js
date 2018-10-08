@@ -1,9 +1,9 @@
 module.exports = {
     base: '/best-ui/',
     title: 'Best UI',
-    description: 'UI library for Vuejs',
+    description: '基于Vue的组件库',
     head:[
-        ['link', { rel: 'icon', href: `/favicon.ico` }],
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
         ['meta', { name: 'theme-color', content: '#ff9800' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -13,6 +13,7 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: '指南', link: '/guide/' },
             { text: 'GitHub', link: 'https://github.com/bestvist/best-ui' },
+            { text: 'Gitter', link: 'https://gitter.im/best-ui/best-ui' },
         ],
         sidebarDepth: 0,
         sidebar: {

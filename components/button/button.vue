@@ -42,6 +42,7 @@ export default {
             tagName,
             {
                 attrs: {
+                    href: this.href,
                     type: this.nativeType,
                     disabled: this.disabled || this.loading
                 },
