@@ -1,19 +1,17 @@
 <template>
-<highlight-code lang="vue">
-<slot></slot>
-</highlight-code>
-<!-- <div class="code">
-
+<div class="code">
     <div class="code--demo">
       <div class="code-content">
-          <slot></slot>
+        <slot></slot>
       </div>
     </div>
     <div v-if="isShow" class="code--segment">
-      <slot name="codeText"></slot>
+      <highlight-code lang="vue">
+        <slot name="codeText"></slot>
+      </highlight-code>
     </div>
     <div v-if="$slots.codeText" class="code--button" @click="handleToggleShow">{{codeTextBtn}}</div>
-</div> -->
+</div>
 </template>
 
 <script>
@@ -32,7 +30,7 @@ export default {
     }
   },
   mounted(){
-      console.log(this.$slots.default)
+      console.log(this.$slots.codeText)
   }
 }
 </script>

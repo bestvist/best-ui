@@ -12,21 +12,17 @@ BestUI 基于[iconfont](http://iconfont.cn/)图标库，图标均以symbol方式
 
 ## 使用方式
 引入b-icon组件，添加name属性即可显示相应图标。
-
-<b-icon name="check-circle"></b-icon>
-<b-icon name="close-circle"></b-icon>
-<b-icon name="left-circle"></b-icon>
-
-```vue
-    <b-icon name="check-circle"></b-icon>
-    <b-icon name="close-circle"></b-icon>
-    <b-icon name="left-circle"></b-icon>
-```
-
 <demo-code>
 <b-icon name="check-circle"></b-icon>
 <b-icon name="close-circle"></b-icon>
 <b-icon name="left-circle"></b-icon>
+<div slot="codeText">
+    ```
+    <b-icon name="check-circle"></b-icon>
+    <b-icon name="close-circle"></b-icon>
+    <b-icon name="left-circle"></b-icon>
+    ```
+</div>
 </demo-code>
 
 
